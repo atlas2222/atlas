@@ -1,0 +1,1573 @@
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Atlas Investments Pvt. Ltd.</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= favicon_link_tag '/favicon.png' %>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application' %>
+    <%= javascript_pack_tag 'application' %>
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png"> -->
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/css/magnific-popup.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/themify-icons.css">
+    <link rel="stylesheet" href="/css/nice-select.css">
+    <link rel="stylesheet" href="/css/flaticon.css">
+    <link rel="stylesheet" href="/css/flaticon.css">
+    <link rel="stylesheet" href="/css/gijgo.css">
+    <link rel="stylesheet" href="/css/slicknav.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+</head>
+<style>
+    
+
+
+
+    /*//////////////////////////////////////////////////////////////////
+    [ FONT ]*/
+    
+    @font-face {
+      font-family: Poppins-Regular;
+      src: url('../fonts/poppins/Poppins-Regular.ttf'); 
+    }
+    
+    @font-face {
+      font-family: Poppins-Medium;
+      src: url('../fonts/poppins/Poppins-Medium.ttf'); 
+    }
+    
+    @font-face {
+      font-family: Poppins-Bold;
+      src: url('../fonts/poppins/Poppins-Bold.ttf'); 
+    }
+    
+    @font-face {
+      font-family: Poppins-SemiBold;
+      src: url('../fonts/poppins/Poppins-SemiBold.ttf'); 
+    }
+    
+    
+    
+    
+    /*//////////////////////////////////////////////////////////////////
+    [ RESTYLE TAG ]*/
+    
+    * {
+        margin: 0px; 
+        padding: 0px; 
+        box-sizing: border-box;
+    }
+    
+    body, html {
+        height: 100%;
+        font-family: Poppins-Regular, sans-serif;
+    }
+    
+    /*---------------------------------------------*/
+    a {
+        font-family: Poppins-Regular;
+        font-size: 14px;
+        line-height: 1.7;
+        color: #666666;
+        margin: 0px;
+        transition: all 0.4s;
+        -webkit-transition: all 0.4s;
+      -o-transition: all 0.4s;
+      -moz-transition: all 0.4s;
+    }
+    
+    a:focus {
+        outline: none !important;
+    }
+    
+    a:hover {
+        text-decoration: none;
+      color: #fff;
+    }
+    
+    /*---------------------------------------------*/
+    h1,h2,h3,h4,h5,h6 {
+        margin: 0px;
+    }
+    
+    p {
+        font-family: Poppins-Regular;
+        font-size: 14px;
+        line-height: 1.7;
+        color: #666666;
+        margin: 0px;
+    }
+    
+    ul, li {
+        margin: 0px;
+        list-style-type: none;
+    }
+    
+    
+    /*---------------------------------------------*/
+    input {
+        outline: none;
+        border: none;
+    }
+    
+    textarea {
+      outline: none;
+      border: none;
+    }
+    
+    textarea:focus, input:focus {
+      border-color: transparent !important;
+    }
+    
+    input:focus::-webkit-input-placeholder { color:transparent; }
+    input:focus:-moz-placeholder { color:transparent; }
+    input:focus::-moz-placeholder { color:transparent; }
+    input:focus:-ms-input-placeholder { color:transparent; }
+    
+    textarea:focus::-webkit-input-placeholder { color:transparent; }
+    textarea:focus:-moz-placeholder { color:transparent; }
+    textarea:focus::-moz-placeholder { color:transparent; }
+    textarea:focus:-ms-input-placeholder { color:transparent; }
+    
+    input::-webkit-input-placeholder { color: #fff;}
+    input:-moz-placeholder { color: #fff;}
+    input::-moz-placeholder { color: #fff;}
+    input:-ms-input-placeholder { color: #fff;}
+    
+    textarea::-webkit-input-placeholder { color: #fff;}
+    textarea:-moz-placeholder { color: #fff;}
+    textarea::-moz-placeholder { color: #fff;}
+    textarea:-ms-input-placeholder { color: #fff;}
+    
+    label {
+      margin: 0;
+      display: block;
+    }
+    
+    /*---------------------------------------------*/
+    button {
+        outline: none !important;
+        border: none;
+        background: transparent;
+    }
+    
+    button:hover {
+        cursor: pointer;
+    }
+    
+    iframe {
+        border: none !important;
+    }
+    
+    
+    /*//////////////////////////////////////////////////////////////////
+    [ Utility ]*/
+    .txt1 {
+      font-family: Poppins-Regular;
+      font-size: 13px;
+      color: #e5e5e5;
+      line-height: 1.5;
+    }
+    
+    
+    /*//////////////////////////////////////////////////////////////////
+    [ login ]*/
+    
+    .limiter {
+      width: 100%;
+      margin: 0 auto;
+    }
+    
+    .container-login100 {
+      width: 100%;  
+      min-height: 100vh;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 15px;
+    
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      position: relative;
+      z-index: 1;  
+    }
+    
+    .container-login100::before {
+      content: "";
+      display: block;
+      position: absolute;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: rgba(27, 23, 23, 0.9);
+    }
+    
+    .wrap-login100 {
+      width: 500px;
+      border-radius: 10px;
+      overflow: hidden;
+      padding: 55px 55px 37px 55px;
+    
+      background: #9152f8;
+      background: -webkit-linear-gradient(top, #000000, #000000);
+      background: -o-linear-gradient(top, #000000, #000000);
+      background: -moz-linear-gradient(top, #000000, #000000);
+      background: linear-gradient(top, #000000, #000000);
+    }
+    
+    
+    /*------------------------------------------------------------------
+    [ Form ]*/
+    
+    .login100-form {
+      width: 100%;
+    }
+    
+    .login100-form-logo {
+      font-size: 60px; 
+      color: #333333;
+    
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background-color: rgb(0, 0, 0);
+      margin: 0 auto;
+    }
+    
+    .login100-form-title {
+      font-family: Poppins-Medium;
+      font-size: 30px;
+      color: #fff;
+      line-height: 1.2;
+      text-align: center;
+      text-transform: uppercase;
+    
+      display: block;
+    }
+    
+    
+    /*------------------------------------------------------------------
+    [ Input ]*/
+    
+    .wrap-input100 {
+      width: 100%;
+      position: relative;
+      border-bottom: 2px solid rgba(255,255,255,0.24);
+      margin-bottom: 30px;
+    }
+    
+    .input100 {
+      font-family: Poppins-Regular;
+      font-size: 16px;
+      color: #fff;
+      line-height: 1.2;
+    
+      display: block;
+      width: 100%;
+      height: 45px;
+      background: transparent;
+      padding: 0 5px 0 38px;
+    }
+    
+    /*---------------------------------------------*/ 
+    .focus-input100 {
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+    }
+    
+    .focus-input100::before {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+    
+      -webkit-transition: all 0.4s;
+      -o-transition: all 0.4s;
+      -moz-transition: all 0.4s;
+      transition: all 0.4s;
+    
+      background: #fff;
+    }
+    
+    .focus-input100::after {
+      font-family: Material-Design-Iconic-Font;
+      font-size: 22px;
+      color: #fff;
+    
+      content: attr(data-placeholder);
+      display: block;
+      width: 100%;
+      position: absolute;
+      top: 6px;
+      left: 0px;
+      padding-left: 5px;
+    
+      -webkit-transition: all 0.4s;
+      -o-transition: all 0.4s;
+      -moz-transition: all 0.4s;
+      transition: all 0.4s;
+    }
+    
+    .input100:focus {
+      padding-left: 5px;
+    }
+    
+    .input100:focus + .focus-input100::after {
+      top: -22px;
+      font-size: 18px;
+    }
+    
+    .input100:focus + .focus-input100::before {
+      width: 100%;
+    }
+    
+    .has-val.input100 + .focus-input100::after {
+      top: -22px;
+      font-size: 18px;
+    }
+    
+    .has-val.input100 + .focus-input100::before {
+      width: 100%;
+    }
+    
+    .has-val.input100 {
+      padding-left: 5px;
+    }
+    
+    
+    /*==================================================================
+    [ Restyle Checkbox ]*/
+    
+    .contact100-form-checkbox {
+      padding-left: 5px;
+      padding-top: 5px;
+      padding-bottom: 35px;
+    }
+    
+    .input-checkbox100 {
+      display: none;
+    }
+    
+    .label-checkbox100 {
+      font-family: Poppins-Regular;
+      font-size: 13px;
+      color: #fff;
+      line-height: 1.2;
+    
+      display: block;
+      position: relative;
+      padding-left: 26px;
+      cursor: pointer;
+    }
+    
+    .label-checkbox100::before {
+      content: "\f26b";
+      font-family: Material-Design-Iconic-Font;
+      font-size: 13px;
+      color: transparent;
+    
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border-radius: 2px;
+      background: #fff;
+      left: 0;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+    
+    .input-checkbox100:checked + .label-checkbox100::before {
+      color: #555555;
+    }
+    
+    
+    /*------------------------------------------------------------------
+    [ Button ]*/
+    .container-login100-form-btn {
+      width: 100%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .login100-form-btn {
+      font-family: Poppins-Medium;
+      font-size: 16px;
+      color: #030303;
+      line-height: 1.2;
+    
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 20px;
+      min-width: 120px;
+      height: 50px;
+      border-radius: 25px;
+    
+      background: #000000;
+      background: -webkit-linear-gradient(bottom, #000000, #000000);
+      background: -o-linear-gradient(bottom, #000000, #000000);
+      background: -moz-linear-gradient(bottom, #000000, #000000);
+      background: linear-gradient(bottom, #000000, #000000);
+      position: relative;
+      z-index: 1;
+    
+      -webkit-transition: all 0.4s;
+      -o-transition: all 0.4s;
+      -moz-transition: all 0.4s;
+      transition: all 0.4s;
+    }
+    
+    .login100-form-btn::before {
+      content: "";
+      display: block;
+      position: absolute;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      border-radius: 25px;
+      background-color: #fff;
+      top: 0;
+      left: 0;
+      opacity: 1;
+    
+      -webkit-transition: all 0.4s;
+      -o-transition: all 0.4s;
+      -moz-transition: all 0.4s;
+      transition: all 0.4s;
+    }
+    
+    .login100-form-btn:hover {
+      color: #fff;
+    }
+    
+    .login100-form-btn:hover:before {
+      opacity: 0;
+    }
+    
+    
+    /*------------------------------------------------------------------
+    [ Responsive ]*/
+    
+    @media (max-width: 576px) {
+      .wrap-login100 {
+        padding: 55px 15px 37px 15px;
+      }
+    }
+    
+    
+    
+    /*------------------------------------------------------------------
+    [ Alert validate ]*/
+    
+    .validate-input {
+      position: relative;
+    }
+    
+    .alert-validate::before {
+      content: attr(data-validate);
+      position: absolute;
+      max-width: 70%;
+      background-color: #fff;
+      border: 1px solid #c80000;
+      border-radius: 2px;
+      padding: 4px 25px 4px 10px;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+      transform: translateY(-50%);
+      right: 0px;
+      pointer-events: none;
+    
+      font-family: Poppins-Regular;
+      color: #fafafa;
+      font-size: 13px;
+      line-height: 1.4;
+      text-align: left;
+    
+      visibility: hidden;
+      opacity: 0;
+    
+      -webkit-transition: opacity 0.4s;
+      -o-transition: opacity 0.4s;
+      -moz-transition: opacity 0.4s;
+      transition: opacity 0.4s;
+    }
+    
+    .alert-validate::after {
+      content: "\f12a";
+      font-family: FontAwesome;
+      font-size: 16px;
+      color: rgb(255, 255, 255);
+    
+      display: block;
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+      transform: translateY(-50%);
+      right: 5px;
+    }
+    
+    .alert-validate:hover:before {
+      visibility: visible;
+      opacity: 1;
+    }
+    
+    @media (max-width: 992px) {
+      .alert-validate::before {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+    
+.mobile{
+
+    display: none;
+}
+    
+@media only screen and (max-width: 600px) {
+  .mobile {
+    display: block;
+  }
+}
+
+.web{
+    display: block;
+}
+
+@media only screen and (max-width: 600px) {
+  .web {
+    display:none;
+  }
+}
+
+.logo{
+  height: 57px;
+  width: 157px;
+}
+    
+.logo2{
+  height: 90px;
+ width: 200px;
+}    
+
+#plans,#plans ul,#plans ul li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#pricePlans:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+#pricePlans {
+  zoom: 1;
+}
+
+#pricePlans {
+  max-width: 69em;
+  margin: 0 auto;
+}
+
+#pricePlans #plans .plan {
+  background: rgb(0, 0, 0);
+  float: left;
+  width: 100%;
+  border: gold solid 2px;
+  text-align: center;
+  border-radius: 5px;
+  margin: 0 0 20px 0;
+
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.planContainer .title h2 {
+  font-size: 2.125em;
+  font-weight: 300;
+  color: #ffffff;
+  margin: 0;
+  padding: .6em 0;
+}
+
+.planContainer .title h2.bestPlanTitle {
+  background: #ffffff;
+
+  background: -webkit-linear-gradient(top, gold,gold);
+  background: -moz-linear-gradient(top,rgb(0, 0, 0),rgb(0, 0, 0));
+  background: -o-linear-gradient(top,rgb(0, 0, 0), rgb(7, 7, 7));
+  background: -ms-linear-gradient(top,rgb(0, 0, 0),rgb(5, 5, 5));
+  background: linear-gradient(top,rgb(5, 5, 5),rgb(0, 0, 0));
+  color: rgb(255, 255, 255);
+  border-radius: 5px 5px 0 0;
+}
+
+
+.planContainer .price p {
+  background: #ffffff;
+
+  background: -webkit-linear-gradient(top, #ccc4c4, #ffffff);
+  background: -moz-linear-gradient(top, #ffffff, #ffffff);
+  background: -o-linear-gradient(top, #ffffff, #ffffff);
+  background: -ms-linear-gradient(top, #ffffff, #ffffff);
+  background: linear-gradient(top, #ffffff, #ffffff);
+  color: rgb(0, 0, 0);
+  font-size: 1.2em;
+  font-weight: 700;
+  height: 2.6em;
+  line-height: 2.6em;
+  margin: 0 0 1em;
+}
+
+.planContainer .price p.bestPlanPrice {
+  background: #dab40e;
+}
+
+.planContainer .price p span {
+  color: #ce7312;
+}
+
+.planContainer .options {
+  margin-top: 10em;
+}
+
+.planContainer .options li {
+  font-weight: 700;
+  color:  #ce7312;
+  line-height: 2.5;
+}
+
+.planContainer .options li span {
+  font-weight: 400;
+  color: white;
+}
+
+.planContainer .button a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: 2.8em;
+  border: 2px solid gold;
+  display: inline-block;
+  width: 80%;
+  height: 2.8em;
+  border-radius: 4px;
+  margin: 1.5em 0 1.8em;
+}
+
+.planContainer .button a.bestPlanButton {
+  color: #fff;
+  background: gold;
+  border: 2px solid  gold;
+}
+
+
+
+
+
+#credits a:hover {
+  text-decoration: none;
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+#pricePlans #plans .plan {
+  width: 49%;
+  margin: 0 2% 20px 0;
+}
+
+#pricePlans #plans > li:nth-child(2n) {
+  margin-right: 0;
+}
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+#pricePlans #plans .plan {
+  width: 49%;
+  margin: 0 2% 20px 0;
+}
+
+#pricePlans #plans > li:nth-child(2n) {
+  margin-right: 0;
+}
+
+}
+
+@media screen and (min-width: 1025px) {
+
+#pricePlans {
+  margin: 2em auto;
+}
+
+#pricePlans #plans .plan {
+  width: 24%;
+  margin: 0 1.33% 20px 0;
+
+  -webkit-transition: all .25s;
+     -moz-transition: all .25s;
+      -ms-transition: all .25s;
+       -o-transition: all .25s;
+          transition: all .25s;
+}
+
+#pricePlans #plans > li:last-child {
+  margin-right: 0;
+}
+
+#pricePlans #plans .plan:hover {
+  -webkit-transform: scale(1.04);
+     -moz-transform: scale(1.04);
+      -ms-transform: scale(1.04);
+       -o-transform: scale(1.04);
+          transform: scale(1.04);
+}
+
+.planContainer .button a {
+  -webkit-transition: all .25s;
+     -moz-transition: all .25s;
+      -ms-transition: all .25s;
+       -o-transition: all .25s;
+          transition: all .25s;
+}
+
+.planContainer .button a:hover {
+  background: gold;
+  color: #fff;
+}
+
+.planContainer .button a.bestPlanButton:hover {
+  background: #221b1b;
+  border: 2px solid #ccaa12;
+}
+
+}
+
+
+</style>
+
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+    <!-- header-start -->
+    <header>
+        <div class="header-area ">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid p-0">
+                    <div class="row align-items-center justify-content-between no-gutters">
+                        <div class="col-xl-2 col-lg-2">
+                            <div class="logo-img">
+                                <a href="index.html">
+                                    <img class="logo mobile" src="/img/logo-edit.png" alt="" >
+                                    <img class="logo2 web" src="/img/logo2.png" alt="" >
+                                </a>
+                            </div>
+                        </div>
+                        <div class="" style=" padding-left: 160px ;">
+                            <div class="main-menu  d-none d-lg-block">
+                              <% if user_signed_in? %>
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><%= link_to "Home", root_path, class: "active" %></li>
+                                        <li><%= link_to "Activities", activities_path %></li>
+                                        <li><%= link_to "Profile", profile_path %></li>
+                                        <li><%= link_to "FAQ", home_faq_path %></li>
+                                        <li><%= link_to "About Us", home_about_path %></li>
+                                        <li><%= link_to "Contact Us", home_contact_path %></li>
+                                        <li><a href=""><%= current_user.name %><i class="ti-angle-down"></i></a>
+                                            <ul class="submenu">
+                                              <li><%= link_to 'Edit Proile', edit_user_registration_path %></li>   
+                                              <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </nav>
+                              <% else %>
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><%= link_to "Home", root_path, class: "active" %></li>
+                                        <li><%= link_to "FAQ", home_faq_path %></li>
+                                        <li><%= link_to "About Us", home_about_path %></li>
+                                        <li><%= link_to "Contact Us", home_contact_path %></li>
+                                        <li><a href="">Join Us<i class="ti-angle-down"></i></a>
+                                            <ul class="submenu">
+                                              <li><%= link_to 'Sign In', new_user_session_path %></li>
+                                              <li><%= link_to 'Sign Up', new_user_registration_path %></li>      
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </nav>
+                              <% end %>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-2 d-none d-lg-block">
+                            
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+
+   
+    <!-- slider_area_end -->
+
+    <!-- about_area _start  -->
+  <!-- slider_area_start -->
+  <div class="slider_area ">
+  <% if notice.present? %>
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      <%= notice %>
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  <% end %>
+  <% if alert.present? %>
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+      <%= alert %>
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  <% end %>
+    <div class="slider_area_inner slider_bg_1 d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-7">
+                    <div class="single_slider">
+                        <div class="slider_text">
+                            <h3 style="color: gold;">High Quality  <br>
+                                Advice and Support</h3>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- slider_area_end -->
+<div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+    {
+    "symbols": [
+      {
+        "proName": "FOREXCOM:SPXUSD",
+        "title": "S&P 500"
+      },
+      {
+        "proName": "FX_IDC:EURUSD",
+        "title": "EUR/USD"
+      },
+      {
+        "proName": "BITSTAMP:ETHUSD",
+        "title": "ETH/USD"
+      },
+      {
+        "description": "",
+        "proName": "NASDAQ:NDAQ"
+      },
+      {
+        "description": "USD/JPY",
+        "proName": "OANDA:USDJPY"
+      },
+      {
+        "description": "GBP/USD",
+        "proName": "OANDA:GBPUSD"
+      }
+    ],
+    "showSymbolLogo": true,
+"colorTheme": "dark",
+"isTransparent": false,
+"displayMode": "adaptive",
+"locale": "in"
+
+
+  
+  }
+    </script>
+  </div>
+<!-- about_area _start  -->
+<div class="about_area" style="background-color: black; margin: 0%;">
+    <div class="opacity_icon d-none d-lg-block">
+        
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12 col-md-12">
+                <div class="single_about_info text-center">
+                    <div class="about_thumb">
+                        <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_ftkzjjau.json"  background="transparent"  speed="1"  style="width: 300px; height: 250px;"  loop  autoplay></lottie-player>
+                    </div>
+                    <h3 class="text-white">What is forex trading?</h3>
+                    <p class="text-white">
+                        Forex trading is the act of buying or selling currencies. Banks, central banks, corporations, institutional investors and individual traders exchange foreign currency for a variety of reasons, including balancing the markets, facilitating international trade and tourism, or making a profit.
+                        Currency is traded in pairs, in both spot and futures markets. The value of a currency pair is driven by economic, political and environmental factors, such as wars, natural disasters, or national elections.
+                         </p>
+                         
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</div>
+
+<div class="about_area" >
+    <div class="opacity_icon d-none d-lg-block">
+        
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12 col-md-12">
+                <div class="single_about_info text-center">
+                    <div class="about_thumb">
+                      <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_qkemUE.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+                    </div>
+                    <h3 class="">What is stock market?</h3>
+                    <p class="">
+                      A stock market, equity market or share market is the aggregation of buyers and sellers of stocks (also called shares), which represent ownership claims on businesses; these may include securities listed on a public stock exchange, as well as stock that is only traded privately, such as shares of private companies which are sold to investors through equity crowdfunding platforms. Investment in the stock market is most often done via stockbrokerages and electronic trading platforms. Investment is usually made with an investment strategy in mind. 
+                    </p>                        
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- about_area _end -->
+<div class="practice_area" style="background-color: black;">
+    <div class="container-fluid p-0">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="section_title text-center mb-60">
+                   <h1 class="text-white">Investment Plans</h1>
+                   <br>
+                   <p class="text-white">Flexible pricing options for personal investment</p>
+                </div>
+            </div>
+        </div>
+        <section id="pricePlans">
+          <ul id="plans">
+            <li class="plan">
+              <ul class="planContainer">
+                <li class="title"><h2 class="bestPlanTitle">Bronze</h2></li>
+                <li class="price"><p class="bestPlanPrice">$5000</p></li>
+                <li>
+                  <ul class="options">
+                    <br>
+                    <br>
+                    <li style=" font-weight: bold;">RETURNS<span>: 7%</span></li>
+                   <br>
+                   <li style=" font-weight: bold;"  >TRADES<span>: 5-6</span></li>
+                   <br>
+                  </ul>
+                </li>
+                <% if user_signed_in? %>
+                  <li class="button"><%= link_to "Purchase", profile_path, class: "bestPlanButton" %></li>
+                <% else %>
+                  <li class="button"><%= link_to "Purchase", new_user_session_path, class: "bestPlanButton" %></li>
+                <% end %>
+              </ul>
+            </li>
+      
+            <li class="plan">
+              <ul class="planContainer">
+                <li class="title"><h2 class="bestPlanTitle">Silver</h2></li>
+                <li class="price"><p class="bestPlanPrice">$10000</p></li>
+                <li>
+                  <ul class="options">
+                    <br>
+                    <br>
+                    <li style=" font-weight: bold;">RETURNS<span>: 10%</span></li>
+                   <br>
+                   <li style=" font-weight: bold;"  >TRADES<span>: 7-8</span></li>
+                   <br>
+                  </ul>
+                </li>
+                <% if user_signed_in? %>
+                  <li class="button"><%= link_to "Purchase", profile_path, class: "bestPlanButton" %></li>
+                <% else %>
+                  <li class="button"><%= link_to "Purchase", new_user_session_path, class: "bestPlanButton" %></li>
+                <% end %>
+              </ul>
+            </li>
+      
+               <li class="plan">
+              <ul class="planContainer">
+                <li class="title"><h2 class="bestPlanTitle">Gold</h2></li>
+                <li class="price"><p class="bestPlanPrice">$15000</p></li>
+                <li>
+                  <ul class="options">
+                    <br>
+                    <br>
+                    <li style=" font-weight: bold;">RETURNS<span>: 13%</span></li>
+                   <br>
+                   <li style=" font-weight: bold;"  >TRADES<span>: 9-10</span></li>
+                   <br>
+                  </ul>
+                </li>
+                <% if user_signed_in? %>
+                  <li class="button"><%= link_to "Purchase", profile_path, class: "bestPlanButton" %></li>
+                <% else %>
+                  <li class="button"><%= link_to "Purchase", new_user_session_path, class: "bestPlanButton" %></li>
+                <% end %>
+              </ul>
+            </li>
+      
+            <li class="plan">
+              <ul class="planContainer">
+                <li class="title"><h2 class="bestPlanTitle">Platinum</h2></li>
+                <li class="price"><p class="bestPlanPrice">$20000</p></li>
+                <li>
+                  <ul class="options">
+                    <br>
+                    <br>
+                    <li style=" font-weight: bold;">RETURNS<span>: 15%</span></li>
+                   <br>
+                   <li style=" font-weight: bold;"  >TRADES<span>: 11-12</span></li>
+                   <br>
+                  </ul>
+                </li>
+                <% if user_signed_in? %>
+                  <li class="button"><%= link_to "Purchase", profile_path, class: "bestPlanButton" %></li>
+                <% else %>
+                  <li class="button"><%= link_to "Purchase", new_user_session_path, class: "bestPlanButton" %></li>
+                <% end %>
+              </ul>
+            </li>
+          </ul> <!-- End ul#plans -->
+        </section>
+    </div>
+</div>
+<div class="about_area" >
+  
+  <div class="container" style="padding-top: 10px;">
+      <div class="row">
+          <div class="col-xl-12 col-md-12">
+              <div class="single_about_info text-center">
+                  <div class="about_thumb">
+                      <div class="">
+                          <div >
+                            <lottie-player src="https://assets10.lottiefiles.com/datafiles/TK6e5afd6uo1kv4/data.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+                          </div>
+                      </div>
+                  </div>
+                  <h3>Bitcoin</h3>
+                  
+                     <p>
+                      A digital currency, you can speculate on the price movements of Bitcoin against a fiat currency like the dollar, in the same way as you can speculate on the price movements of the euro against the dollar, for instance. This means that rather than buying Bitcoin directly and being susceptible to its highly volatile price spikes, you can actually trade it when it both rises or falls in price, as CFDs.
+                      </p>
+                  
+              </div>
+          </div>
+         
+      </div>
+  </div>
+</div>
+    <div class="container-login100" style="  width: 100%; background-image: url('https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2020/07/bitcoin-1594870913.jpg');">
+        <div class="row">
+            <div class="col-xl-12 col-md-12">
+                <div class="single_about_info text-center">
+                    <div class="about_thumb">
+                        <h1 class="text-white">CRYPTOCAP</h1>
+                        <br>
+                        <p>Crypto Currencies has some advantages which make it very popular among investors</p>
+                    </div>
+                    <br>
+                   
+                    <p class="">
+                        <div class="tradingview-widget-container mobile" style="margin: auto; width:350px; ">
+                            <div class="tradingview-widget-container__widget"></div>
+                          
+                            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
+                            {
+                            "colorTheme": "dark",
+                            "dateRange": "12M",
+                            "showChart": true,
+                            "locale": "en",
+                            "largeChartUrl": "",
+                            "isTransparent": false,
+                            "showSymbolLogo": true,
+                            "width": "320",
+                            "height": "450",
+                            "plotLineColorGrowing": "rgba(25, 118, 210, 1)",
+                            "plotLineColorFalling": "rgba(25, 118, 210, 1)",
+                            "gridLineColor": "rgba(42, 46, 57, 1)",
+                            "scaleFontColor": "rgba(120, 123, 134, 1)",
+                            "belowLineFillColorGrowing": "rgba(0, 0, 0, 0.12)",
+                            "belowLineFillColorFalling": "rgba(33, 150, 243, 0.12)",
+                            "symbolActiveColor": "rgba(33, 150, 243, 0.12)",
+                            "tabs": [
+                              {
+                                "title": "Crypto ",
+                                "symbols": [
+                                  {
+                                    "s": "CRYPTOCAP:XRP",
+                                    "d": "Ripple"
+                                  },
+                                  {
+                                    "s": "CRYPTOCAP:BTC",
+                                    "d": "Bitcoin"
+                                  },
+                                  {
+                                    "s": "CRYPTOCAP:ETH",
+                                    "d": "Ethereum"
+                                  },
+                                  {
+                                    "s": "CRYPTOCAP:LTC",
+                                    "d": "Litecoin"
+                                  },
+                                  {
+                                    "s": "CRYPTOCAP:XLM",
+                                    "d": "Steller"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                            </script>
+                          </div>
+
+
+                          <div class="tradingview-widget-container web" style="margin: auto; width:350px; ">
+                            <div class="tradingview-widget-container__widget"></div>
+                        
+                            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
+                            {
+                            "colorTheme": "dark",
+                            "dateRange": "12M",
+                            "showChart": true,
+                            "locale": "en",
+                            "largeChartUrl": "",
+                            "isTransparent": false,
+                            "showSymbolLogo": true,
+                            "width": "1050",
+                            "height": "650",
+                            "plotLineColorGrowing": "rgba(25, 118, 210, 1)",
+                            "plotLineColorFalling": "rgba(25, 118, 210, 1)",
+                            "gridLineColor": "rgba(42, 46, 57, 1)",
+                            "scaleFontColor": "rgba(120, 123, 134, 1)",
+                            "belowLineFillColorGrowing": "rgba(0, 0, 0, 0.12)",
+                            "belowLineFillColorFalling": "rgba(33, 150, 243, 0.12)",
+                            "symbolActiveColor": "rgba(33, 150, 243, 0.12)",
+                            "tabs": [
+                              {
+                                "title": "Crypto ",
+                                "symbols": [
+                                  {
+                                    "s": "CRYPTOCAP:XRP",
+                                    "d": "Ripple"
+                                  },
+                                  {
+                                    "s": "CRYPTOCAP:BTC",
+                                    "d": "Bitcoin"
+                                  },
+                                  {
+                                    "s": "CRYPTOCAP:ETH",
+                                    "d": "Ethereum"
+                                  },
+                                  {
+                                    "s": "CRYPTOCAP:LTC",
+                                    "d": "Litecoin"
+                                  },
+                                  {
+                                    "s": "CRYPTOCAP:XLM",
+                                    "d": "Steller"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                            </script>
+                          </div>
+                         </p>
+                         <br><br> 
+                </div>
+            </div>
+           
+        </div>
+    </div>
+      
+<!-- practice_area_end -->
+<div class="about_area"  >
+  <div class="opacity_icon d-none d-lg-block">
+      
+  </div>
+  <div class="container" style="padding-top: 10px; margin:auto;">
+    <h1 class="" style="text-align: center; padding: 15px;">Forex Cross Rates</h1>
+      <br>
+<div class="tradingview-widget-container web" style="margin: auto;">
+<div class="tradingview-widget-container__widget"></div>
+
+<script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-forex-cross-rates.js" async>
+{
+"width": 970,
+"height": 400,
+"currencies": [
+  "EUR",
+  "USD",
+  "JPY",
+  "GBP",
+  "CHF",
+  "AUD",
+  "CAD",
+  "NZD",
+  "CNY"
+],
+"isTransparent": false,
+"colorTheme": "dark",
+"locale": "in"
+}
+</script>
+</div>
+<div class="tradingview-widget-container mobile" style="margin: auto;">
+<div class="tradingview-widget-container__widget"></div>
+<script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-forex-cross-rates.js" async>
+{
+"width": 320,
+"height": 300,
+"currencies": [
+  "EUR",
+  "USD",
+  "JPY",
+  "GBP",
+  "CHF",
+  "AUD",
+  "CAD",
+  "NZD",
+  "CNY"
+],
+"isTransparent": false,
+"colorTheme": "dark",
+"locale": "in"
+}
+</script>
+</div>
+<!-- TradingView Widget END -->
+  </div>
+</div>
+ 
+<div class="testmonial_area testmonial_bg_1 overlay2">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="testmonial_active owl-carousel">
+                    <div class="single_testmonial text-center">
+                        <i class="flaticon-straight-quotes"></i>
+                        <p> “I was totally new to trading. I was suggested to invest in<br> atlas investments, so I approached atlas investments. Things have taken<br> an amazing turn since then. With the kind of savings I have accumulated<br> over time, I can surely say that my money is in safe hands.”</p>
+                        <div class="author_info d-flex justify-content-center align-items-center">
+                            
+                           
+                        </div>
+                    </div>
+                    <div class="single_testmonial text-center">
+                        <i class="flaticon-straight-quotes"></i>
+                        <p><br>“Its Very Nice Experience Trading With TradeDeal. Spend Less And Earn More...” </p>
+                        <div class="author_info d-flex justify-content-center align-items-center">
+                            
+                          
+                        </div>
+                    </div>
+                    <div class="single_testmonial text-center">
+                        <i class="flaticon-straight-quotes"></i>
+                        <p><br>"    Atlas investments provides excellent execution and system management<br> services. I am a very satisfied client. "</p>
+                        <div class="author_info d-flex justify-content-center align-items-center">
+                            
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- testmonial_area_end  -->
+
+<!-- <div class="appointment_area">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-xl-5 col-md-6 col-lg-6">
+                <div class="appiontment_thumb d-none d-lg-block">
+                    <img src="img/appointment/1.png" alt="">
+                </div>
+            </div>
+            <div class="col-xl-6 offset-xl-1 col-md-6 col-md-12 col-lg-6">
+                <div class="appointment_info">
+                    <div class="opacity_icon d-none d-lg-block">
+                        <i class="flaticon-balance"></i>
+                    </div>
+                    <h3>Make an Appointment</h3>
+                    <p>Many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some.</p>
+                    <form action="#">
+                            <div class="row">
+                                <div class="col-xl-6 col-md-6">
+                                        <input type="text" placeholder="Your Name">
+                                </div>
+                                <div class="col-xl-6 col-md-6">
+                                        <input type="email" placeholder="Your Email">
+                                </div>
+                                <div class="col-xl-6 col-md-6">
+                                        <input type="text" placeholder="Phone no.">
+                                </div>
+                                <div class="col-xl-6 col-md-6">
+                                    <input id="datepicker" placeholder="Appointment date">
+                                </div>
+                                <div class="col-xl-12">
+                                    <textarea placeholder="Message" ></textarea>
+                                </div>
+                                <div class="col-xl-12">
+                                    <div class="appoinment_button">
+                                        <button class="boxed-btn5 " type="submit" >Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+    
+                        </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div> -->
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+<div class="tradingview-widget-container__widget"></div>
+<script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+{
+"symbols": [
+  {
+    "proName": "FOREXCOM:SPXUSD",
+    "title": "S&P 500"
+  },
+  {
+    "proName": "FX_IDC:EURUSD",
+    "title": "EUR/USD"
+  },
+  {
+    "proName": "BITSTAMP:ETHUSD",
+    "title": "ETH/USD"
+  },
+  {
+    "description": "",
+    "proName": "NASDAQ:NDAQ"
+  },
+  {
+    "description": "USD/JPY",
+    "proName": "OANDA:USDJPY"
+  },
+  {
+    "description": "GBP/USD",
+    "proName": "OANDA:GBPUSD"
+  }
+],
+
+"showSymbolLogo": true,
+"colorTheme": "dark",
+"isTransparent": false,
+"displayMode": "adaptive",
+"locale": "in"
+
+
+}
+</script>
+</div>
+    <!-- footer_start -->
+<footer class="footer" style="background-color: black;">
+        <div class="footer_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-md-6 col-lg-3">
+                        <div class="footer_widget">
+                            <div class="footer_logo">
+                                <a href="index.html">
+                                    <img class="logo mobile" src="/img/logo-edit.png" alt="">
+                                    <img class="logo2 web" src="/img/logo2.png" alt="" >
+                                </a>
+                            </div>
+
+                            <p class="footer_text">East Kent Ave, Bryn Mawr, PA 19010, United States<br>
+                                <a class="domain" href="#">atlasinvestments@support.com</a></p>
+                            
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-6 col-lg-2">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                    Navigation
+                            </h3>
+                            <ul>
+                              <% if user_signed_in? %>
+                                <li><%= link_to "Home", root_path %></li>
+                                <li><%= link_to "Activities", activities_path %></li>
+                                <li><%= link_to "Profile", profile_path %></li>
+                                <li><%= link_to "FAQ", home_faq_path %></li>
+                              <% else %>
+                                <li><%= link_to "Home", root_path %></li>
+                                <li><%= link_to 'Sign In', new_user_session_path %></li>
+                                <li><%= link_to 'Sign Up', new_user_registration_path %></li>
+                                <li><%= link_to "FAQ", home_faq_path %></li>
+                              <% end %>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-6 col-lg-2">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                    Useful Links
+                            </h3>
+                            <ul>
+                                <li><%= link_to "About Us", home_about_path %></li>
+                            
+                                <li><%= link_to "Contact Us", home_contact_path %></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-6 col-lg-4">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                    Subscribe
+                            </h3>
+                            <form action="/home/subscribe" class="newsletter_form" method="post">
+                              <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
+                                <input type="text" name="email" placeholder="Enter your mail">
+                                <button type="submit">Subscribe</button>
+                            </form>
+                            <p class="newsletter_text">Subscribe newsletter to get updates</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </footer>
+    <!-- footer_end -->
+
+
+    <!-- JS here -->
+    <script src="/js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/owl.carousel.min.js"></script>
+    <script src="/js/isotope.pkgd.min.js"></script>
+    <script src="/js/ajax-form.js"></script>
+    <script src="/js/waypoints.min.js"></script>
+    <script src="/js/jquery.counterup.min.js"></script>
+    <script src="/js/imagesloaded.pkgd.min.js"></script>
+    <script src="/js/scrollIt.js"></script>
+    <script src="/js/jquery.scrollUp.min.js"></script>
+    <script src="/js/wow.min.js"></script>
+    <script src="/js/nice-select.min.js"></script>
+    <script src="/js/gijgo.min.js"></script>
+    <script src="/js/jquery.slicknav.min.js"></script>
+    <script src="/js/jquery.magnific-popup.min.js"></script>
+    <script src="/js/plugins.js"></script>
+
+    <!--contact js-->
+    <script src="/js/contact.js"></script>
+    <script src="/js/jquery.ajaxchimp.min.js"></script>
+    <script src="/js/jquery.form.js"></script>
+    <script src="/js/jquery.validate.min.js"></script>
+    <script src="/js/mail-script.js"></script>
+
+    <script src="/js/main.js"></script>
+
+    <script>
+            $('#datepicker').datepicker({
+                iconsLibrary: 'fontawesome',
+                // disableDaysOfWeek: [0, 0],
+            //     icons: {
+            //      rightIcon: '<span class="fa fa-caret-down"></span>'
+            //  }
+            });
+            $('#datepicker2').datepicker({
+                iconsLibrary: 'fontawesome',
+                icons: {
+                 rightIcon: '<span class="fa fa-caret-down"></span>'
+             }
+    
+            });
+            var timepicker = $('#timepicker').timepicker({
+             format: 'HH.MM'
+         });
+        </script>
+</body>
+
+</html>

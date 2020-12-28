@@ -1,0 +1,87 @@
+<header>
+    <div class="header-area ">
+        <div id="sticky-header" class="main-header-area">
+            <div class="container-fluid p-0">
+                <div class="row align-items-center justify-content-between no-gutters">
+                    <div class="col-xl-2 col-lg-2">
+                        <div class="logo-img">
+                            <a href="index.html">
+                                <img src="/img/logo.png" alt="" style="width: 257px;">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="" style=" padding-left: 160px ;">
+                        <div class="main-menu  d-none d-lg-block">
+                            <nav>
+                              <ul id="navigation">
+                                  <li><%= link_to "Home", admin_index_path %></li>
+                                  <li><%= link_to "Activities",admin_users_activities_path %></li>
+                                  <% if Btc.any? %>
+                                    <li><%= link_to "Edit QR", edit_admin_qr_path(Btc.first) %></li>
+                                  <% else %>
+                                    <li><%= link_to "New QR", new_admin_qr_path %></li>
+                                  <% end %>
+                              </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-2 d-none d-lg-block">
+                        
+                    </div>
+                    <div class="col-12">
+                        <div class="mobile_menu d-block d-lg-none"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<br>
+<br>
+
+<div class=" " style=" margin: auto; width: 110%;">
+<% if @activities.any? %>
+    <div class="container" >
+        <section style="width: 80%;">
+            <div class="tbl-header">
+              <table cellpadding="0" cellspacing="0" border="0" >
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                   <th>Date</th>
+                   <th>Asset</th>
+                   <th>Entry</th>
+                   <th>Stoploss</th>
+                   <th>Target 1</th>
+                   <th>Target 2</th>
+
+                  </tr>
+                </thead>
+              </table>
+            </div>
+            <div class="tbl-content">
+              <table cellpadding="0" cellspacing="0" border="0">
+                <tbody>
+            <% @activities.each do |activity| %>
+                  <tr>
+                    <td><%= activity.user.name %></td>
+                    <td><%= activity.user.email %></td>
+                    <td><%= activity.date.strftime("%m/%d/%Y") %></td>
+                    <td><%= activity.asset %></td>
+                    <td><%= activity.entry %></td>
+                    <td><%= activity.stoploss %></td>
+                    <td><%= activity.target_1 %></td>
+                    <td><%= activity.target_2 %></td>
+                  </tr>
+            <% end %>
+                </tbody>
+              </table>
+            </div>
+          </section>                          
+    </div>
+<% else %>
+  <p>No Activities currently</p>
+<% end %>
+</div>   

@@ -1,0 +1,273 @@
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application' %>
+    <%= javascript_pack_tag 'application' %>
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+   
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+.card {
+  border: 2px solid #494844;
+  box-shadow: 5px 6px 0px #d4bb18;
+  transition: 0.3s all;
+  border-radius: 3px;
+  background-color: rgb(0, 0, 0);
+  width: 250px;
+ padding: 15px;
+
+
+
+  
+}
+        
+h1{
+  font-size: 30px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 15px;
+}
+table{
+  width:100%;
+  table-layout: fixed;
+}
+.tbl-header{
+  background-color: rgba(255, 217, 0, 0.795);
+ }
+.tbl-content{
+  height:300px;
+  overflow-x:auto;
+  margin-top: 0px;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+th{
+  padding: 20px 15px;
+  text-align: left;
+  font-weight: 500;
+  font-size: 12px;
+  color: #fff;
+  text-transform: uppercase;
+}
+td{
+  padding: 15px;
+  text-align: left;
+  vertical-align:middle;
+  font-weight: 300;
+  font-size: 12px;
+  color: #fff;
+  border-bottom: solid 1px rgba(255,255,255,0.1);
+}
+
+
+/* demo styles */
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+body{
+  background: -webkit-linear-gradient(left, #000000, #000000);
+  background: linear-gradient(to right, #000000, #000000);
+  font-family: 'Roboto', sans-serif;
+}
+section{
+  margin: 50px;
+}
+
+
+/* follow me template */
+.made-with-love {
+  margin-top: 40px;
+  padding: 10px;
+  clear: left;
+  text-align: center;
+  font-size: 10px;
+  font-family: arial;
+  color: #fff;
+}
+.made-with-love i {
+  font-style: normal;
+  color: #F50057;
+  font-size: 14px;
+  position: relative;
+  top: 2px;
+}
+.made-with-love a {
+  color: #fff;
+  text-decoration: none;
+}
+.made-with-love a:hover {
+  text-decoration: underline;
+}
+
+
+/* for custom scrollbar for webkit browser*/
+
+::-webkit-scrollbar {
+    width: 6px;
+} 
+
+    </style>
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+    <!-- header-start -->
+    <header>
+    <div class="header-area ">
+        <div id="sticky-header" class="main-header-area">
+            <div class="container-fluid p-0">
+                <div class="row align-items-center justify-content-between no-gutters">
+                    <div class="col-xl-2 col-lg-2">
+                        <div class="logo-img">
+                            <a href="index.html">
+                                <img src="/img/logo.png" alt="" style="width: 257px;">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="" style=" padding-left: 160px ;">
+                        <div class="main-menu  d-none d-lg-block">
+                            <nav>
+                              <ul id="navigation">
+                                  <li><%= link_to "Home", admin_index_path %></li>
+                                  <li><%= link_to "Activities",admin_users_activities_path %></li>
+                                  <% if Btc.any? %>
+                                    <li><%= link_to "Edit QR", edit_admin_qr_path(Btc.first) %></li>
+                                  <% else %>
+                                    <li><%= link_to "New QR", new_admin_qr_path %></li>
+                                  <% end %>
+                              </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-2 d-none d-lg-block">
+                        
+                    </div>
+                    <div class="col-12">
+                        <div class="mobile_menu d-block d-lg-none"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+   <br><br> 
+    <% if notice %>
+        <p class="alert alert-success" role="alert"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+        <p class="alert alert-danger" role="alert"><%= alert %></p>
+    <% end %>
+    <!--edit profile element start-->
+   <div class="container " style="width:100%;">
+  
+
+  
+  <h1>Deposit Transactions for <%= @user.name %></h1> 
+  
+<br><br>
+  <div class="container mobile">
+
+    <div class="tbl-header">
+      <table cellpadding="0" cellspacing="0" border="0" >
+        <thead>
+          <tr >
+            <th style="font-size: 0.7rem;">Date</th>
+            <th style="font-size: 0.7rem;">Amount</th>
+            <th style="font-size: 0.7rem;">Status</th>
+            <th style="font-size: 0.7rem;">Action</th>
+            <th  style="font-size: 0.6rem;">Action</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+      <div class="tbl-content">
+        <table cellpadding="0" cellspacing="0" border="0">
+          <tbody>
+            <% if @transactions.any? %>
+              <% @transactions.each do |transaction| %>
+              <tr>
+                <%= form_for transaction, url: admin_transaction_edit_path(transaction) do |f| %>
+                <td style="font-size: 0.8rem;"><%= transaction.created_at.strftime("%m-%d-%Y") %></td>
+                <td style="font-size: 0.8rem;"> $<%= transaction.amount %> </td>
+                <td style="font-size: 0.8rem;">
+                  <% if transaction.pending %>
+                    Pending
+                  <% else %>
+                    Completed
+                  <% end %>
+                </td>
+                <td style="font-size: 0.8rem;"> <div class="form-check">
+                  <%= f.radio_button :pending, true, class: "form-check-input" %>
+                  <label class="form-check-label" for="exampleRadios1">
+                    Pending
+                  </label>
+                </div>
+                <div class="form-check">
+                  <%= f.radio_button :pending, false, class: "form-check-input" %>
+                  <label class="form-check-label" for="exampleRadios2">
+                    Completed
+                  </label>
+                </div></td>
+                <td style="font-size: 0.8rem;">
+                 <%= f.button "Update", class: "btn" %>
+                </td>
+                <% end %>
+              </tr>
+              <% end %>
+            <% else %>
+              <br>
+              <center>This user has no transactions</center>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+      <br>
+    </div>
+
+</div>   <!--edit profile element end-->
+    <script>
+            $('#datepicker').datepicker({
+                iconsLibrary: 'fontawesome',
+                // disableDaysOfWeek: [0, 0],
+            //     icons: {
+            //      rightIcon: '<span class="fa fa-caret-down"></span>'
+            //  }
+            });
+            $('#datepicker2').datepicker({
+                iconsLibrary: 'fontawesome',
+                icons: {
+                 rightIcon: '<span class="fa fa-caret-down"></span>'
+             }
+    
+            });
+            var timepicker = $('#timepicker').timepicker({
+             format: 'HH.MM'
+         });
+        </script>
+        <script>
+            // '.tbl-content' consumed little space for vertical scrollbar, scrollbar width depend on browser/os/platfrom. Here calculate the scollbar width .
+$(window).on("load resize ", function() {
+  var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
+  $('.tbl-header').css({'padding-right':scrollWidth});
+}).resize();
+        </script>
+</body>
+
+</html>

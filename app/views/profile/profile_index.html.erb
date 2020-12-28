@@ -1,0 +1,733 @@
+<html class="no-js" lang="zxx">
+
+<head>
+  
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Atlas Investments Pvt. Ltd. | Profile</title>
+    <meta name="description" content="">
+    <%= favicon_link_tag '/favicon.png' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+
+    <link rel="stylesheet" href="/css/boot.css">
+
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application'  %>
+    <%= javascript_pack_tag 'application' %>
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png"> -->
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+  
+    <link rel="stylesheet" href="/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/css/magnific-popup.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <link rel="stylesheet" href="/css/themify-icons.css">
+    <link rel="stylesheet" href="/css/nice-select.css">
+    <link rel="stylesheet" href="/css/flaticon.css">
+    <link rel="stylesheet" href="/css/flaticon.css">
+    <link rel="stylesheet" href="/css/gijgo.css">
+    <link rel="stylesheet" href="/css/slicknav.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        
+h1{
+  font-size: 30px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 15px;
+}
+table{
+  width:100%;
+  table-layout: fixed;
+}
+.tbl-header{
+  background-color: rgba(255, 217, 0, 0.795);
+ }
+.tbl-content{
+  height:300px;
+  overflow-x:auto;
+  margin-top: 0px;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+th{
+  padding: 20px 15px;
+  text-align: left;
+  font-weight: 500;
+  font-size: 12px;
+  color: #fff;
+  border-color: gold;
+  text-transform: uppercase;
+}
+td{
+  padding: 15px;
+  text-align: left;
+  vertical-align:middle;
+  font-weight: 300;
+  font-size: 15px;
+  color: #fff;
+  border-bottom: solid 1px rgba(255,255,255,0.1);
+}
+
+
+/* demo styles */
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+body{
+  background: -webkit-linear-gradient(left, #000000, #000000);
+  background: linear-gradient(to right, #000000, #000000);
+  font-family: 'Roboto', sans-serif;
+}
+section{
+  margin: 50px;
+}
+
+
+/* follow me template */
+
+
+
+/* for custom scrollbar for webkit browser*/
+
+::-webkit-scrollbar {
+    width: 6px;
+} 
+
+.card {
+  border: 2px solid #494844;
+  box-shadow: 5px 6px 0px #d4bb18;
+  transition: 0.3s all;
+  border-radius: 3px;
+  background-color: rgb(0, 0, 0);
+  
+ 
+
+
+
+  
+}
+body {
+  background: #000000;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgba(0, 0, 0, .65);
+}
+
+a:hover {
+  color: rgba(0, 0, 0, .45);
+}
+
+@media only screen and (max-width: 600px) {
+  .card-deck {
+    width: 440px;
+  }
+}
+
+.mobile{
+
+display: none;
+}
+
+@media only screen and (max-width: 600px) {
+.mobile {
+display: block;
+}
+}
+
+.web{
+display: block;
+}
+
+@media only screen and (max-width: 600px) {
+.web {
+display:none;
+}
+}
+
+.logo{
+height: 57px;
+width: 157px;
+}
+
+.logo2{
+height: 90px;
+width: 200px;
+}    
+
+
+
+    </style>
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+    <!-- header-start -->
+    <header>
+      <div class="header-area ">
+          <div id="sticky-header" class="main-header-area">
+              <div class="container-fluid p-0">
+                  <div class="row align-items-center justify-content-between no-gutters">
+                      <div class="col-xl-2 col-lg-2">
+                          <div class="logo-img">
+                              <a href="index.html">
+                                  <img class="logo mobile" src="/img/logo-edit.png" alt="" >
+                                  <img class="logo2 web" src="/img/logo2.png" alt="" >
+                              </a>
+                          </div>
+                      </div>
+                      <div class="" style=" padding-left: 160px ;">
+                          <div class="main-menu  d-none d-lg-block">
+                              <% if user_signed_in? %>
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><%= link_to "Home", root_path %></li>
+                                        <li><%= link_to "Activities", activities_path %></li>
+                                        <li><%= link_to "Profile", profile_path, class: "active" %></li>
+                                        <li><%= link_to "FAQ", home_faq_path %></li>
+                                        <li><%= link_to "About Us", home_about_path %></li>
+                                        <li><%= link_to "Contact Us", home_contact_path %></li>
+                                        <li><a href=""><%= current_user.name %><i class="ti-angle-down"></i></a>
+                                            <ul class="submenu">
+                                              <li><%= link_to 'Edit Proile', edit_user_registration_path %></li>   
+                                              <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </nav>
+                              <% else %>
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><%= link_to "Home", root_path %></li>
+                                        <li><%= link_to "FAQ", home_faq_path %></li>
+                                        <li><%= link_to "About Us", home_about_path %></li>
+                                        <li><%= link_to "Contact Us", home_contact_path %></li>
+                                        <li><a href="">Join Us<i class="ti-angle-down"></i></a>
+                                            <ul class="submenu">
+                                              <li><%= link_to 'Sign In', new_user_session_path %></li>
+                                              <li><%= link_to 'Sign Up', new_user_registration_path %></li>      
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </nav>
+                              <% end %>
+                          </div>
+                      </div>
+                      <div class="col-xl-3 col-lg-2 d-none d-lg-block">
+                          
+                      </div>
+                      <div class="col-12">
+                          <div class="mobile_menu d-block d-lg-none"></div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </header>
+    <!-- header-end -->
+
+    <!-- slider_area_start -->
+    
+    <!-- slider_area_end -->
+
+    <!-- about_area _start  -->
+   
+    <!-- about_area _end -->
+
+    <!-- practice_area_start -->
+    
+    <!-- practice_area_end -->
+<br><br>
+    <!-- our_loyers-start  -->
+   <div class="container" >
+    <!-- our_loyers-end  -->
+    <% if notice.present? %>
+      <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <%= notice %>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    <% end %>
+    <% if alert.present? %>
+      <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <%= alert %>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    <% end %>
+    <div class="card-deck"   style="width: 96%; margin: auto;">  
+      <div class="card  " >
+        <div class="card-body">
+          <div class="row justify-content-between">
+            <div class="col-4">
+              <i style="font-size: 4rem; color: gold;" class="  fas fa-file-invoice-dollar"></i>
+            </div>
+            <div class="col-4">
+              <h2 class="font-weight-light text-white" style="font-size: 1rem;">Balance</h2>
+              <h2 style="color:rgb(255, 255, 255); font-size: large;" id="balance"> <i style="font-size: 1rem; color: gold;" class="fas fa-dollar-sign"></i> <%= current_user.balance %></h2>
+            </div>
+          </div>
+        </div>
+       
+      </div>
+
+    <div class="card " >
+      <div class="card-body">
+        <div class="row justify-content-between">
+          <div class="col-4">
+            <i style="font-size: 4rem; color: gold;" class="fas fa-chart-line"></i>
+          </div>
+          <div class="col-4">
+            <h2 class="font-weight-light text-white" style="font-size: 1rem;">Profit</h2>
+            <h2 style="color:rgb(255, 255, 255); font-size: large;"><i style="font-size: 1rem; color: gold;" class="fas fa-dollar-sign"></i> <%= current_user.profit %></h2>
+          </div>
+        </div>
+      </div>
+     
+    </div>
+    <div class="card ">
+      <div class="card-body">
+       
+   <div class="row justify-content-between" style="padding-top: 15px;">
+    <div class="col-4">
+      <button data-toggle="modal" data-target="#exampleModalCenter" class="btn" style="background-color:gold; border-radius: 0%;"><i style="font-size: 1rem; color: rgb(0, 0, 0);" class="  fas fa-donate"></i> Deposit</button>
+    </div>
+    <div class="col-6" style="padding: 1px;">
+      <a  data-toggle="modal" data-target="#exampleModalCenter2" class="btn" style="background-color:gold; border-radius: 0%;" ><i style="font-size: 1rem; color: rgb(0, 0, 0);" class="fas fa-hand-holding-usd"></i>  withdrawal</a>
+    </div>
+    </div>
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" >
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content" style=" border: 2px solid #494844;
+    box-shadow: 5px 6px 0px #d4bb18;
+    transition: 0.3s all;
+    border-radius: 3px;
+    background-color: rgb(0, 0, 0);
+    ">
+      <div class="modal-header" style="border: none;">
+        
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h1>Deposit</h1> 
+<form method="get" action="/deposit/initiate_payment">
+  <input type="hidden" name="pp" value="a8dc285cfd36dd74726fc0a534dccfd9ae3778b30bf943dad0d823964c275edc">
+  <input type="hidden" name="xpub" value="be5cf48ca7fa0a18e1e596c7b25097f1">
+  <input type="hidden" name="phub" value="3851ccf2c7a7503e1d60e27192d75f5d">
+  <input type="hidden" name="currency" value="USD">
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text"   id="basic-addon3"  style="background: gold; border-radius: 0%;">Amount</span>
+    </div>
+    <input type="number" name="amount" style=" border-radius: 0%;"   value="" class="form-control"  id="txt" aria-describedby="basic-addon3">
+  
+   
+  </div>
+ 
+  
+  
+
+  
+      </div>
+    
+        <div style=" margin: auto; padding: 10px;">
+          
+          <div class=""><button type="submit" class="btn disable " id="demo"style="background-color:gold; border-radius: 0%;"  > <i style="font-size: 1rem; color: rgb(0, 0, 0);" class=" fas fa-donate"></i> Deposit</button></div>
+        </div>
+       
+        
+     </form>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" >
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content" style=" border: 2px solid #494844;
+    box-shadow: 5px 6px 0px #d4bb18;
+    transition: 0.3s all;
+    border-radius: 3px;
+    background-color: rgb(0, 0, 0);
+    ">
+      <div class="modal-header" style="border: none;">
+        
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h1>withdrawal</h1>
+<form method="get" action="/withdrawls/new"> 
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text"   id="basic-addon3"  style="background: gold; border-radius: 0%;">Amount</span>
+    </div>
+    <input type="number" name="amount" style=" border-radius: 0%;"   value="" class="form-control"  id="txt2" aria-describedby="basic-addon3">
+  
+   
+  </div>
+ 
+  
+  
+
+  
+      </div>
+    
+        <div style=" margin: auto; padding: 10px;">
+          
+          <div class=""><button type="submit" class="btn " id="balanceCheck"style="background-color:gold; border-radius: 0%;"  > <i style="font-size: 1rem; color: rgb(0, 0, 0);" class=" fas fa-donate"></i> Withdraw</button></div>
+        </div>
+       
+        
+     </form>
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+   
+  </div>
+</div> 
+
+    <!-- testmonial_area_start  -->
+   
+        <div class="container-fluid" >
+        
+            <section >
+                <!--for demo wrap-->
+                <h1>Transction History</h1>
+              
+            </section>
+              
+              
+              <!-- follow me template -->
+              
+        </div>
+        
+    </div>
+    <!-- testmonial_area_end  -->
+      <div class="container mobile">
+
+        <div class="tbl-header">
+          <table cellpadding="0" cellspacing="0" border="0" >
+            <thead>
+              <tr >
+                <th style="font-size: 0.7rem;">Date</th>
+                <th style="font-size: 0.7rem;">Amount</th>
+                <th style="font-size: 0.7rem;">Status</th>
+                <th  style="font-size: 0.6rem;">Deposit / <br>Withdrawal</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+          <div class="tbl-content">
+            <table cellpadding="0" cellspacing="0" border="0">
+              <tbody>
+                <% if @transactions.any? %>
+                  <% @transactions.each do |transaction| %>
+                    <% if transaction.deposit %>
+                      <tr>
+                        <td style="font-size: 0.8rem;"><%= transaction.created_at.strftime("%m-%d-%Y") %></td>
+                        <td style="font-size: 0.8rem;"> $<%= transaction.amount %> </td>
+                        <td style="font-size: 0.8rem;">
+                          <% if transaction.pending %>
+                            Pending
+                          <% else %>
+                            Completed
+                          <% end %>
+                        </td>
+                        <td  style="font-size: 0.8rem; color: green;">Deposit</td>
+                      </tr>
+                    <% elsif transaction.withdrawl %>
+                      <tr>
+                        <td style="font-size: 0.8rem;"><%= transaction.created_at.strftime("%m-%d-%Y") %></td>
+                        <td style="font-size: 0.8rem;"> $<%= transaction.amount %> </td>
+                        <td style="font-size: 0.8rem;">
+                          <% if transaction.pending %>
+                            Pending
+                          <% else %>
+                            Completed
+                          <% end %>
+                        </td>
+                        <td  style="font-size: 0.8rem; color: red;">Withdrawl</td>
+                      </tr>
+                    <% end %>
+                  <% end %>
+                <% else %>
+                  <br>
+                  <center><p>No transactions yet</p></center>
+                <% end %>
+              </tbody>
+            </table>
+            
+          </div>
+          <br>
+        </div>
+        <div class="container web ">
+
+          <div class="tbl-header">
+            <table cellpadding="0" cellspacing="0" border="0" >
+              <thead>
+                <tr >
+                  <th>Date</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                  <th>Deposit/Withdrawal</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+            <div class="tbl-content">
+              <table cellpadding="0" cellspacing="0" border="0">
+                <tbody>
+                  <% if @transactions.any? %>
+                    <% @transactions.each do |transaction| %>
+                      <% if transaction.deposit %>
+                        <tr>
+                          <td><%= transaction.created_at.strftime("%m-%d-%Y") %></td>
+                          <td>  $<%= transaction.amount %> </td>
+                          <td>
+                            <% if transaction.pending %>
+                              Pending
+                            <% else %>
+                              Completed
+                            <% end %>
+                          </td>
+                          <td style="color: green;">Deposit</td>
+                        </tr>
+                      <% elsif transaction.withdrawl %>
+                        <tr>
+                          <td><%= transaction.created_at.strftime("%m-%d-%Y") %></td>
+                          <td>  $<%= transaction.amount %> </td>
+                          <td>
+                            <% if transaction.pending %>
+                              Pending
+                            <% else %>
+                              Completed
+                            <% end %>
+                          </td>
+                          <td style="color: red;">Withdrawl</td>
+                        </tr>
+                      <% end%>
+                    <% end %>
+                  <% else %>
+                    <br>
+                    <center><p>No transactions yet</p></center>
+                  <% end %>
+                </tbody>
+              </table>
+              
+            </div>
+            <br>
+          </div>
+     
+    
+
+    <!-- footer_start -->
+<footer class="footer" style="background-color: black;">
+        <div class="footer_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-md-6 col-lg-3">
+                        <div class="footer_widget">
+                            <div class="footer_logo">
+                                <a href="index.html">
+                                    <img class="logo mobile" src="/img/logo-edit.png" alt="">
+                                    <img class="logo2 web" src="/img/logo2.png" alt="" >
+                                </a>
+                            </div>
+
+                            <p class="footer_text">East Kent Ave, Bryn Mawr, PA 19010, United States<br>
+                                <a class="domain" href="#">atlasinvestments@support.com</a></p>
+                            
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-6 col-lg-2">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                    Navigation
+                            </h3>
+                            <ul>
+                              <% if user_signed_in? %>
+                                <li><%= link_to "Home", root_path %></li>
+                                <li><%= link_to "Activities", activities_path %></li>
+                                <li><%= link_to "Profile", profile_path %></li>
+                                <li><%= link_to "FAQ", home_faq_path %></li>
+                              <% else %>
+                                <li><%= link_to "Home", root_path %></li>
+                                <li><%= link_to 'Sign In', new_user_session_path %></li>
+                                <li><%= link_to 'Sign Up', new_user_registration_path %></li>
+                                <li><%= link_to "FAQ", home_faq_path %></li>
+                              <% end %>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-6 col-lg-2">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                    Useful Links
+                            </h3>
+                            <ul>
+                                <li><%= link_to "About Us", home_about_path %></li>
+                            
+                                <li><%= link_to "Contact Us", home_contact_path %></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-6 col-lg-4">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                    Subscribe
+                            </h3>
+                            <form action="/home/subscribe" class="newsletter_form" method="post">
+                              <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
+                                <input type="text" name="email" placeholder="Enter your mail">
+                                <button type="submit">Subscribe</button>
+                            </form>
+                            <p class="newsletter_text">Subscribe newsletter to get updates</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </footer>
+    <!-- footer_end -->
+
+
+    <!-- JS here -->
+    <script src="/js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/owl.carousel.min.js"></script>
+    <script src="/js/isotope.pkgd.min.js"></script>
+    <script src="/js/ajax-form.js"></script>
+    <script src="/js/waypoints.min.js"></script>
+    <script src="/js/jquery.counterup.min.js"></script>
+    <script src="/js/imagesloaded.pkgd.min.js"></script>
+    <script src="/js/scrollIt.js"></script>
+    <script src="/js/jquery.scrollUp.min.js"></script>
+    <script src="/js/wow.min.js"></script>
+    <script src="/js/nice-select.min.js"></script>
+    <script src="/js/gijgo.min.js"></script>
+    <script src="/js/jquery.slicknav.min.js"></script>
+    <script src="/js/jquery.magnific-popup.min.js"></script>
+    <script src="/js/plugins.js"></script>
+
+    <!--contact js-->
+    <script src="/js/contact.js"></script>
+    <script src="/js/jquery.ajaxchimp.min.js"></script>
+    <script src="/js/jquery.form.js"></script>
+    <script src="/js/jquery.validate.min.js"></script>
+    <script src="/js/mail-script.js"></script>
+
+    <script src="/js/main.js"></script>
+    <script>
+      document.getElementById("demo").addEventListener("click", getVal);
+ function getVal(){
+  var txt = document.getElementById('txt').value;
+ 
+
+
+ 
+
+  if(txt < 5000){
+
+    document.getElementById("myH1").style.color = "red";
+          
+
+
+  }  else{
+
+    document.getElementById("myH1").style.color = "black";
+  
+  }
+
+  
+
+ }
+ document.getElementById("balanceCheck").addEventListener("click", balanceComp);
+ function balanceComp(){
+
+  var txt2 = document.getElementById('txt2').value;
+var balance = document.getElementById('balance').innerText;
+
+
+
+
+if( txt2 < balance){
+
+  console.log("less than current balance");
+
+}
+else{
+
+console.log(" not less than current balance");
+ 
+}
+
+ }
+
+  
+  </script>
+
+
+    <script>
+            $('#datepicker').datepicker({
+                iconsLibrary: 'fontawesome',
+                // disableDaysOfWeek: [0, 0],
+            //     icons: {
+            //      rightIcon: '<span class="fa fa-caret-down"></span>'
+            //  }
+            });
+            $('#datepicker2').datepicker({
+                iconsLibrary: 'fontawesome',
+                icons: {
+                 rightIcon: '<span class="fa fa-caret-down"></span>'
+             }
+    
+            });
+            var timepicker = $('#timepicker').timepicker({
+             format: 'HH.MM'
+         });
+        </script>
+        <script>
+            // '.tbl-content' consumed little space for vertical scrollbar, scrollbar width depend on browser/os/platfrom. Here calculate the scollbar width .
+$(window).on("load resize ", function() {
+  var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
+  $('.tbl-header').css({'padding-right':scrollWidth});
+}).resize();
+        </script>
+</body>
+
+</html>

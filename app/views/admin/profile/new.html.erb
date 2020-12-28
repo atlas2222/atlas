@@ -1,0 +1,21 @@
+<div class="container" style="width:100%;"> 
+  <h1>Upadte <%= @profile.name %>'s Profit</h1>
+<%= form_for(@profile, as: :profile, url: admin_user_profile_index_path, method: :post) do |f| %>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon3">Profit</span>
+    </div>
+    <%= f.number_field :profit, class: "form-control" %>
+  </div>
+    <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon3">Balance</span>
+    </div>
+    <%= f.number_field :balance, class: "form-control" %>
+  </div>
+
+  <div>
+  <%= f.submit "Upadte User Profit", class: "btn col-12 text-white", style: "background-color: gold;" %>
+  </div>
+<% end %>
+</div>

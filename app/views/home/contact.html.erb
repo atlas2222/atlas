@@ -1,0 +1,455 @@
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Atlas Investments Pvt. Ltd | Contact Us</title>
+    <meta name="description" content="">
+    <%= favicon_link_tag '/favicon.png' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application' %>
+    <%= javascript_pack_tag 'application' %>
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png"> -->
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/css/magnific-popup.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/themify-icons.css">
+    <link rel="stylesheet" href="/css/nice-select.css">
+    <link rel="stylesheet" href="/css/flaticon.css">
+    <link rel="stylesheet" href="/css/flaticon.css">
+    <link rel="stylesheet" href="/css/gijgo.css">
+    <link rel="stylesheet" href="/css/slicknav.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        
+h1{
+  font-size: 30px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 15px;
+}
+table{
+  width:100%;
+  table-layout: fixed;
+}
+.tbl-header{
+  background-color: rgba(255, 217, 0, 0.795);
+ }
+.tbl-content{
+  height:300px;
+  overflow-x:auto;
+  margin-top: 0px;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+th{
+  padding: 20px 15px;
+  text-align: left;
+  font-weight: 500;
+  font-size: 12px;
+  color: #fff;
+  border-color: gold;
+  text-transform: uppercase;
+}
+td{
+  padding: 15px;
+  text-align: left;
+  vertical-align:middle;
+  font-weight: 300;
+  font-size: 12px;
+  color: #fff;
+  border-bottom: solid 1px rgba(255,255,255,0.1);
+}
+
+
+/* demo styles */
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+body{
+  background: -webkit-linear-gradient(left, #000000, #000000);
+  background: linear-gradient(to right, #000000, #000000);
+  font-family: 'Roboto', sans-serif;
+}
+section{
+  margin: 50px;
+}
+
+
+/* follow me template */
+
+
+
+/* for custom scrollbar for webkit browser*/
+
+::-webkit-scrollbar {
+    width: 6px;
+} 
+
+.card {
+  border: 2px solid #494844;
+  box-shadow: 5px 6px 0px #d4bb18;
+  transition: 0.3s all;
+  border-radius: 3px;
+  background-color: rgb(0, 0, 0);
+  
+ 
+
+
+
+  
+}
+body {
+  background: #000000;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgba(0, 0, 0, .65);
+}
+
+a:hover {
+  color: rgba(0, 0, 0, .45);
+}
+
+@media only screen and (max-width: 600px) {
+  .card-deck {
+    width: 440px;
+  }
+}
+
+.mobile{
+
+display: none;
+}
+
+@media only screen and (max-width: 600px) {
+.mobile {
+display: block;
+}
+}
+
+.web{
+display: block;
+}
+
+@media only screen and (max-width: 600px) {
+.web {
+display:none;
+}
+}
+
+.logo{
+height: 57px;
+width: 157px;
+}
+
+.logo2{
+height: 90px;
+width: 200px;
+}    
+
+
+
+    </style>
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+    <!-- header-start -->
+    <header>
+        <div class="header-area ">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid p-0">
+                    <div class="row align-items-center justify-content-between no-gutters">
+                        <div class="col-xl-2 col-lg-2">
+                            <div class="logo-img">
+                                <a href="index.html">
+                                    <img class="logo mobile" src="/img/logo-edit.png" alt="" >
+                                    <img class="logo2 web" src="/img/logo2.png" alt="" >
+                                </a>
+                            </div>
+                        </div>
+                        <div class="" style=" padding-left: 160px ;">
+                            <div class="main-menu  d-none d-lg-block">
+                              <% if user_signed_in? %>
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><%= link_to "Home", root_path %></li>
+                                        <li><%= link_to "Activities", activities_path %></li>
+                                        <li><%= link_to "Profile", profile_path %></li>
+                                        <li><%= link_to "FAQ", home_faq_path %></li>
+                                        <li><%= link_to "About Us", home_about_path %></li>
+                                        <li><%= link_to "Contact Us", home_contact_path, class: "active" %></li>
+                                        <li><a href=""><%= current_user.name %><i class="ti-angle-down"></i></a>
+                                            <ul class="submenu">
+                                              <li><%= link_to 'Edit Proile', edit_user_registration_path %></li>   
+                                              <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </nav>
+                              <% else %>
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><%= link_to "Home", root_path %></li>
+                                        <li><%= link_to "FAQ", home_faq_path %></li>
+                                        <li><%= link_to "About Us", home_about_path %></li>
+                                        <li><%= link_to "Contact Us", home_contact_path, class: "active" %></li>
+                                        <li><a href="">Join Us<i class="ti-angle-down"></i></a>
+                                            <ul class="submenu">
+                                              <li><%= link_to 'Sign In', new_user_session_path %></li>
+                                              <li><%= link_to 'Sign Up', new_user_registration_path %></li>      
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </nav>
+                              <% end %>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-2 d-none d-lg-block">
+                            
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+<br> <br>
+
+
+
+
+  <div class="container" style="padding: 15px;">
+    <% if notice.present? %>
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      <%= notice %>
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  <% end %>
+  <% if alert.present? %>
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+      <%= alert %>
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  <% end %>
+    <div class="row">
+        <div class="col-12">
+            <h2 class="contact-title" style="color: gold;">Get in Touch</h2>
+        </div>
+        <div class="col-lg-8">
+            <form class="form-contact contact_form" action="/home/post_message" method="post" id="contactForm" novalidate="novalidate">
+              <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <input class="form-control valid" name="name" id="name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" placeholder="Enter your name" required>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <input class="form-control valid" name="email" id="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" placeholder="Email" required>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-group">
+                            <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Subject'" placeholder="Enter Subject" require>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-group">
+                            <textarea class="form-control w-100" name="message" id="message" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message'" placeholder=" Name" required></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group mt-3">
+                    <input type="submit" value="Submit" class="button button-contactForm boxed-btn">
+                </div>
+            </form>
+        </div>
+        <div class="col-lg-3 offset-lg-1">
+            <div class="media contact-info ">
+                <span class="contact-info__icon"><i class="ti-home"></i></span>
+                <div class="media-body">
+                    <h3 class="text-white">Buttonwood, California.</h3>
+                    <p>Rosemead, CA 91770</p>
+                </div>
+            </div>
+            <div class="media contact-info">
+                <span class="contact-info__icon"><i class="ti-tablet"></i></span>
+                <div class="media-body">
+                    <h class="text-white"3>+1 253 565 2365</h3>
+                    <p>Mon to Fri 9am to 6pm</p>
+                </div>
+            </div>
+            <div class="media contact-info">
+                <span class="contact-info__icon"><i class="ti-email"></i></span>
+                <div class="media-body">
+                    <h3 class="text-white">support@colorlib.com</h3>
+                    <p>Send us your query anytime!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+      
+  </div>
+  
+   
+
+    <!-- footer_start -->
+<footer class="footer" style="background-color: black;">
+        <div class="footer_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-md-6 col-lg-3">
+                        <div class="footer_widget">
+                            <div class="footer_logo">
+                                <a href="index.html">
+                                    <img class="logo mobile" src="/img/logo-edit.png" alt="">
+                                    <img class="logo2 web" src="/img/logo2.png" alt="" >
+                                </a>
+                            </div>
+
+                            <p class="footer_text">East Kent Ave, Bryn Mawr, PA 19010, United States<br>
+                                <a class="domain" href="#">atlasinvestments@support.com</a></p>
+                            
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-6 col-lg-2">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                    Navigation
+                            </h3>
+                            <ul>
+                              <% if user_signed_in? %>
+                                <li><%= link_to "Home", root_path %></li>
+                                <li><%= link_to "Activities", activities_path %></li>
+                                <li><%= link_to "Profile", profile_path %></li>
+                                <li><%= link_to "FAQ", home_faq_path %></li>
+                              <% else %>
+                                <li><%= link_to "Home", root_path %></li>
+                                <li><%= link_to 'Sign In', new_user_session_path %></li>
+                                <li><%= link_to 'Sign Up', new_user_registration_path %></li>
+                                <li><%= link_to "FAQ", home_faq_path %></li>
+                              <% end %>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-6 col-lg-2">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                    Useful Links
+                            </h3>
+                            <ul>
+                                <li><%= link_to "About Us", home_about_path %></li>
+                            
+                                <li><%= link_to "Contact Us", home_contact_path %></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-6 col-lg-4">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                    Subscribe
+                            </h3>
+                            <form action="/home/subscribe" class="newsletter_form" method="post">
+                              <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
+                                <input type="text" name="email" placeholder="Enter your mail">
+                                <button type="submit">Subscribe</button>
+                            </form>
+                            <p class="newsletter_text">Subscribe newsletter to get updates</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </footer>
+    <!-- footer_end -->
+
+
+    <!-- JS here -->
+    <script src="/js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/owl.carousel.min.js"></script>
+    <script src="/js/isotope.pkgd.min.js"></script>
+    <script src="/js/ajax-form.js"></script>
+    <script src="/js/waypoints.min.js"></script>
+    <script src="/js/jquery.counterup.min.js"></script>
+    <script src="/js/imagesloaded.pkgd.min.js"></script>
+    <script src="/js/scrollIt.js"></script>
+    <script src="/js/jquery.scrollUp.min.js"></script>
+    <script src="/js/wow.min.js"></script>
+    <script src="/js/nice-select.min.js"></script>
+    <script src="/js/gijgo.min.js"></script>
+    <script src="/js/jquery.slicknav.min.js"></script>
+    <script src="/js/jquery.magnific-popup.min.js"></script>
+    <script src="/js/plugins.js"></script>
+
+    <!--contact js-->
+    <script src="/js/contact.js"></script>
+    <script src="/js/jquery.ajaxchimp.min.js"></script>/
+    <script src="/js/jquery.form.js"></script>
+    <script src="/js/jquery.validate.min.js"></script>
+    <script src="/js/mail-script.js"></script>
+
+    <script src="/js/main.js"></script>
+
+    <script>
+            $('#datepicker').datepicker({
+                iconsLibrary: 'fontawesome',
+                // disableDaysOfWeek: [0, 0],
+            //     icons: {
+            //      rightIcon: '<span class="fa fa-caret-down"></span>'
+            //  }
+            });
+            $('#datepicker2').datepicker({
+                iconsLibrary: 'fontawesome',
+                icons: {
+                 rightIcon: '<span class="fa fa-caret-down"></span>'
+             }
+    
+            });
+            var timepicker = $('#timepicker').timepicker({
+             format: 'HH.MM'
+         });
+        </script>
+        <script>
+            // '.tbl-content' consumed little space for vertical scrollbar, scrollbar width depend on browser/os/platfrom. Here calculate the scollbar width .
+$(window).on("load resize ", function() {
+  var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
+  $('.tbl-header').css({'padding-right':scrollWidth});
+}).resize();
+        </script>
+</body>
+
+</html>/

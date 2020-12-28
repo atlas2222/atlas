@@ -1,0 +1,395 @@
+<% if @qr.nil? %>
+  <p>Payment gateway down</p>
+<% else %>
+
+<html class="no-js" lang="zxx">
+
+<head>
+  
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>https://gateway.blockchain.com/pp/a8dc285cfd36dd74726fc0a534dccfd9ae3778b30bf943dad0d823964c275edc?amount=amount.to_s&currency=USD&description=Deposit+your+money+to+Atlas+Investment+Pvt.+Ltd.</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+    
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/easytimer@1.1.1/dist/easytimer.min.js"></script>
+
+    <style>
+        *{
+  margin: 0;
+  padding: 0;
+}
+#progress{
+  width: 100%;
+  height: 5px;
+ 
+  
+  background-color: #fff;
+
+}
+#progress-bar{
+  height: 5px;
+  background-color:rgb(33, 167, 220);
+
+}
+button{
+  margin: 0 auto 20px;
+}
+
+.mobile{
+        
+        display: none;
+        }
+        
+        @media only screen and (max-width: 600px) {
+        .mobile {
+        display: block;
+        }
+        }
+        
+        .web{
+        display: block;
+        }
+        
+        @media only screen and (max-width: 600px) {
+        .web {
+        display:none;
+        }
+        }
+        
+       .sizer {
+         width: 70%;
+
+       }
+       @media only screen and (max-width: 600px) {
+        .sizer {
+       width: 100%;
+        }
+        }
+        .imgsizer{
+          width: 35%;
+        }
+
+        @media only screen and (max-width: 600px) {
+          .imgsizer {
+       width: 70%;
+        }
+        }
+        .titlebt{
+          padding-left: 15%;
+        }
+
+        @media only screen and (max-width: 600px) {
+          .titlebt {
+            padding-left: 2%;
+        }
+        }
+        
+/* Red */
+.danger {
+  border-color: #f44336;
+  color: red;
+}
+
+.danger:hover {
+  background: #f44336;
+  color: white;
+}
+    </style>
+</head>
+
+<body  onload="myprofunction()">
+  <br><br><br>
+<div class="container" >
+   <div class=" titlebt"  style="margin: auto;">
+    <h5>Atlas Investments Pvt. Ltd.</h5>
+</div>
+    
+    <div class="card sizer " style=" margin:auto;  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);"  >
+        
+   
+        <div class="card-body" style="padding: 0%; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3); " >
+            <div class="web">
+
+            
+                <div class="row" style="padding: 15px;">
+                  <div class="col-sm-9">Cryptocurrency Payment<br><span style="font-size: smaller; color: grey;">Deposit BTC to Atlas Investments Pvt. Ltd.</span></div>
+                  <div class="col-sm-2" style="text-align: right;">1 BTC<br> <span style="font-size: small; color:grey;">$<%= @current_price %> USD</span>
+                </div>
+                <div class="col-sm-1" style="padding: 0%;">
+                    <img src="/img/icon_btc.png" style="width: 50px; height: 50px;">
+                </div>
+               
+                </div>
+              </div>
+            
+                <div class="mobile" style="padding: 12px;" >
+                  <div class="col-sm-9" style="text-align: center;">Cryptocurrency Payment<br><span style="font-size: smaller; color: grey;">Deposit BTC to Atlas Investments Pvt. Ltd.</span></div>
+                  <br>
+                  <div class="col-sm-2" style="text-align: center;" >1 BTC<br> <span style="font-size: small; color:grey;">$<%= @current_price %> USD</span>
+              
+                    <img src="/img/icon_btc.png" style=" width: 20px; height: 20px;">
+                </div>
+               
+                </div>
+               
+              
+                <div id="progress">
+                    <div id="progress-bar"></div>
+                  </div>
+    
+               
+                  <br>
+
+<div id="countdownExample" style="  text-align: center; font-size:x-large; color: gray;">
+    <h2 id="demo"></h2>
+</div>
+
+
+<br>
+
+<%= image_tag @qr.image.url, style: "height: fit-content; display: block; margin-left: auto; margin-right: auto;", class: "imgsizer" %>
+
+<!-- <img  class="imgsizer" src="img/QR.jpg" style=""> -->
+
+<div style="margin: auto; text-align: center;">
+
+    <span style=" font-size: small; color: gray;">Send the  amount to the indicated address below</span>
+                
+</div>
+
+<div class="input-group " style="padding: 12px;">
+  
+  <div class="input-group-prepend">
+    <span class="input-group-text" style="background-color: rgba(255, 255, 255, 0.258);" id="basic-addon1">BTC</span>
+  </div>
+  <input type="text" class="form-control" disabled id="myInput" placeholder="<%= @btc_amoun_price %>" aria-label="Username" aria-describedby="basic-addon1" style=" background-color: rgb(255, 255, 255); text-align: center;">
+  <div class="input-group-append"> 
+      <span  style="border-left: none;background-color: rgb(255, 255, 255);" class="input-group-text btn" data-toggle="tooltip" id="btc"  data-clipboard-text="<%= @btc_amoun_price %>" ></span>
+      
+    </div>
+    
+</div>
+
+<div class="input-group mb-3" style="padding-left: 12px; padding-right: 12px;">
+  
+    <div class="input-group-prepend">
+      <span class="input-group-text" style="background-color: rgb(255, 255, 255);" id="basic-addon1"><i class="fas fa-wallet"  style="margin-right:10px;"></i></span>
+    </div>
+    <input type="text" class="form-control"  disabled id="myInput" placeholder="<%= @qr.address %>" aria-label="Username" aria-describedby="basic-addon1" style=" background-color: rgb(255, 255, 255); text-align: center;">
+    <div class="input-group-append">
+        <span class="input-group-text btn" data-toggle="tooltip" id="copy"  data-clipboard-text="<%= @qr.address %>" style="background-color: rgb(255, 255, 255);"><i class="far fa-copy" ></i></span>
+        
+      </div>
+      
+  </div>
+ 
+              
+        </div>
+        <div class="card-footer text-muted" style="background-color:rgba(255, 255, 255, 0.816); text-align: center; box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1); ">
+           <span style="font-size: small;">The payment is processed on behalf of merchant and it may take up to 24 - 48 hours to settle into your account. Bitcoin values are subject to market conditions.</span>
+            <hr>
+            <span style="font-size: small;">Learn more about bitcoin. <a class="font-italic" href="https://bitcoin.org">Learn more</a></span>
+          </div>
+
+      </div>
+      <div class=" titlebt" style="margin: auto; ">
+        <div class="row" style="width: 85%; padding: 2px;">
+            <div class="col-sm-9"><span style="font-size: small; color: grey;"></span><br> <div style="margin-top:10px;">
+              <a href="/profile" class="btn danger" style="padding: 4px; width: 80px;">X Cancel</a>
+            </div>
+            </div>
+            <div class="col-sm-3" style="text-align: right;"> <span style="font-size: small; color:grey;"></span>
+          </div>
+        
+         
+          </div>
+    </div>
+  
+</div>
+
+
+
+
+
+  <form id="frm1">
+    <br>
+    <input style="visibility: hidden;" type="text" name="fname" value="" placeholder="Enter data" ><br>
+    <input type="text" style="visibility:hidden ;" name="lname" value="5" placeholder="Enter data" ><br><br>
+  </form> 
+
+
+ 
+
+
+  
+     
+        <!--button onclick="timer()">START</button-->
+  
+   
+  
+    
+<br>
+<br>
+<br>
+<br>
+  
+
+
+   
+   
+     
+    
+    
+     
+    
+
+
+
+ 
+
+
+ 
+<script>
+   
+
+var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = window.location.search.substring(1),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+        }
+    }
+};
+
+var amount = getUrlParameter('amount');
+console.log(amount);
+
+var url = '/deposit/payment_pending?txn_amount=' + amount;
+
+var timer = new Timer();
+timer.start({countdown: true, startValues: {seconds: 300}});
+
+$('#countdownExample .values').html(timer.getTimeValues().toString());
+
+timer.addEventListener('secondsUpdated', function (e) {
+    $('#countdownExample .values').html(timer.getTimeValues().toString());
+});
+
+timer.addEventListener('targetAchieved', function (e) {
+    $(location).attr('href', url);
+    
+});
+
+
+
+    </script>
+  
+
+    <script>
+        var t = 0;
+function myprofunction() {
+    var x = document.getElementById("frm1");
+    hr = x.elements[0].value;
+    min = x.elements[1].value;
+
+    window.t = hr*3600 + min*60;
+    window.per = window.t;
+    //document.getElementById("demo").innerHTML = hr*3600 + min*60;
+    timer();
+}
+function timer(){
+    var temp = window.t;
+    window.t = window.t-1;
+    var h = Math.floor(temp/3600);
+    var m = Math.floor((temp%3600)/60);
+    var s = Math.floor((temp - h*3600 - m*60));
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById("demo").innerHTML = m+ ":"+ s ;
+    document.getElementById("progress-bar").style.width = (temp*100)/(window.per) + "%";
+
+    var t = setTimeout(timer,1000);
+
+    /*if(temp<900){
+        document.getElementById("progress-bar").style.backgroundColor = "red";
+        document.getElementById("progress").style.borderColor = "red";
+    }*/
+    if (temp < 0) {
+        clearInterval(t);
+        document.getElementById("demo").innerHTML = "";
+    }
+}
+function checkTime(i){
+    if (i<10) { i = "0" + i }
+    return i;
+}
+    </script>
+
+    <script>
+      // Tooltip
+
+$('#copy').tooltip({
+  trigger: 'click',
+  placement: 'bottom'
+});
+
+function setTooltip(message) {
+  $('#copy').tooltip('hide')
+    .attr('data-original-title', message)
+    .tooltip('show');
+}
+
+function hideTooltip() {
+  setTimeout(function() {
+    $('#copy').tooltip('hide');
+  }, 1000);
+}
+
+// Clipboard
+var clipboard = new ClipboardJS('#copy');
+
+clipboard.on('success', function(e) {
+     setTooltip('Copied!');
+     hideTooltip();
+ 
+});
+
+clipboard.on('error', function(e) {
+    setTooltip('Failed!');
+    hideTooltip();
+  
+});
+ 
+
+
+// var clipboard = new ClipboardJS('button');
+
+// clipboard.on('success', function(e) {
+//   setTooltip('Copied!');
+//   hideTooltip();
+// });
+
+// clipboard.on('error', function(e) {
+//   setTooltip('Failed!');
+//   hideTooltip();
+// });
+    </script>
+ 
+</body>
+
+</html>
+<% end %>

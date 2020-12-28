@@ -1,0 +1,384 @@
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Atlas Investments Pvt. Ltd. | Edit Profile</title>
+    <meta name="description" content="">
+    <%= favicon_link_tag '/favicon.png' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application' %>
+    <%= javascript_pack_tag 'application' %>
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png"> -->
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+   
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+
+.card {
+  border: 2px solid #494844;
+ 
+  transition: 0.3s all;
+  border-radius: 3px;
+  background-color: rgb(0, 0, 0)
+  
+}
+        
+h1{
+  font-size: 30px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 15px;
+}
+table{
+  width:100%;
+  table-layout: fixed;
+}
+.tbl-header{
+  background-color: rgba(255, 217, 0, 0.795);
+ }
+.tbl-content{
+  height:300px;
+  overflow-x:auto;
+  margin-top: 0px;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+th{
+  padding: 20px 15px;
+  text-align: left;
+  font-weight: 500;
+  font-size: 12px;
+  color: #fff;
+  text-transform: uppercase;
+}
+td{
+  padding: 15px;
+  text-align: left;
+  vertical-align:middle;
+  font-weight: 300;
+  font-size: 12px;
+  color: #fff;
+  border-bottom: solid 1px rgba(255,255,255,0.1);
+}
+
+
+/* demo styles */
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+body{
+  background: -webkit-linear-gradient(left, #000000, #000000);
+  background: linear-gradient(to right, #000000, #000000);
+  font-family: 'Roboto', sans-serif;
+}
+section{
+  margin: 50px;
+}
+
+
+/* follow me template */
+.made-with-love {
+  margin-top: 40px;
+  padding: 10px;
+  clear: left;
+  text-align: center;
+  font-size: 10px;
+  font-family: arial;
+  color: #fff;
+}
+.made-with-love i {
+  font-style: normal;
+  color: #F50057;
+  font-size: 14px;
+  position: relative;
+  top: 2px;
+}
+.made-with-love a {
+  color: #fff;
+  text-decoration: none;
+}
+.made-with-love a:hover {
+  text-decoration: underline;
+}
+
+
+/* for custom scrollbar for webkit browser*/
+
+::-webkit-scrollbar {
+    width: 6px;
+} 
+
+.mobile{
+
+    display: none;
+}
+    
+@media only screen and (max-width: 600px) {
+  .mobile {
+    display: block;
+  }
+}
+
+.web{
+    display: block;
+}
+
+@media only screen and (max-width: 600px) {
+  .web {
+    display:none;
+  }
+}
+
+.logo{
+  height: 57px;
+  width: 157px;
+}
+    
+.logo2{
+  height: 90px;
+ width: 200px;
+}    
+</style>
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+    <!-- header-start -->
+    <header>
+        <div class="header-area ">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid p-0">
+                    <div class="row align-items-center justify-content-between no-gutters">
+                        <div class="col-xl-2 col-lg-2">
+                            <div class="logo-img">
+                                <a href="index.html">
+                                    <img class="logo mobile" src="/img/logo-edit.png" alt="" >
+                                    <img class="logo2 web" src="/img/logo2.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="" style=" padding-left: 160px ;">
+                            <div class="main-menu  d-none d-lg-block">
+                              <% if user_signed_in? %>
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><%= link_to "Home", root_path %></li>
+                                        <li><%= link_to "Activities", activities_path %></li>
+                                        <li><%= link_to "Profile", profile_path %></li>
+                                        <li><%= link_to "FAQ", home_faq_path %></li>
+                                        <li><%= link_to "About Us", home_about_path %></li>
+                                        <li><%= link_to "Contact Us", home_contact_path %></li>
+                                        <li><a href="" class="active"><%= current_user.name %><i class="ti-angle-down"></i></a>
+                                            <ul class="submenu">
+                                              <li><%= link_to 'Edit Proile', edit_user_registration_path %></li>   
+                                              <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </nav>
+                              <% else %>
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><%= link_to "Home", root_path %></li>
+                                        <li><%= link_to "FAQ", home_faq_path %></li>
+                                        <li><%= link_to "About Us", home_about_path %></li>
+                                        <li><%= link_to "Contact Us", home_contact_path %></li>
+                                        <li><a href="" class="active">Join Us<i class="ti-angle-down"></i></a>
+                                            <ul class="submenu">
+                                              <li><%= link_to 'Sign In', new_user_session_path %></li>
+                                              <li><%= link_to 'Sign Up', new_user_registration_path %></li>      
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </nav>
+                              <% end %>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-2 d-none d-lg-block">
+                            
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+   <br> <br> <br> 
+    <!--edit profile element start-->
+   <div class="container " style="width:100%;">
+  
+
+  
+  <h1>Edit <%= current_user.name %>'s Profile</h1> 
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <div style="width: 50%; margin: auto;">
+    <br>
+    <%= render "devise/shared/error_messages", resource: resource %>
+  </div>
+  <br>
+    
+    <div class="form-row">
+      <div class="form-group col-md-6" style="margin: auto;">
+        <label for="inputEmail4" class="text-white">Name</label>
+        <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "Name", class: "form-control" %>
+      </div>
+    
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6" style="margin: auto;">
+        <label for="inputPassword4" class="text-white">Email</label>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: "form-control" %>
+      </div>
+    
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6" style="margin: auto;">
+        <label for="inputEmail4" class="text-white">Password</label>
+        <%= f.password_field :password, autocomplete: "new-password", placeholder: "New Password", class: "form-control" %>
+      </div>
+    
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6" style="margin: auto;">
+        <label for="inputPassword4" class="text-white">Confirm Password</label>
+        <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Confirm Password", class: "form-control" %>
+      </div>
+    
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6" style="margin: auto;">
+        <label for="inputPassword4" class="text-white">Current Password</label>
+        <%= f.password_field :current_password, autocomplete: "current-password", placeholder: "Current Password", class: "form-control" %>
+      </div>
+    
+    </div>
+    
+   
+    <br>
+   
+  <div style=" margin: auto; width: 40%;">
+    <%= f.button "Update", class: "btn col-12 text-white", style: "background-color: gold;" %>
+  </div>
+  <% end %>
+  
+  
+  
+
+</div>   <!--edit profile element end-->
+  
+ 
+    
+<footer class="footer" style="background-color: black;">
+        <div class="footer_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-md-6 col-lg-3">
+                        <div class="footer_widget">
+                            <div class="footer_logo">
+                                <a href="index.html">
+                                    <img class="logo mobile" src="/img/logo-edit.png" alt="">
+                                    <img class="logo2 web" src="/img/logo2.png" alt="" >
+                                </a>
+                            </div>
+
+                            <p class="footer_text">East Kent Ave, Bryn Mawr, PA 19010, United States<br>
+                                <a class="domain" href="#">atlasinvestments@support.com</a></p>
+                            
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-6 col-lg-2">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                    Navigation
+                            </h3>
+                            <ul>
+                              <% if user_signed_in? %>
+                                <li><%= link_to "Home", root_path %></li>
+                                <li><%= link_to "Activities", activities_path %></li>
+                                <li><%= link_to "Profile", profile_path %></li>
+                                <li><%= link_to "FAQ", home_faq_path %></li>
+                              <% else %>
+                                <li><%= link_to "Home", root_path %></li>
+                                <li><%= link_to 'Sign In', new_user_session_path %></li>
+                                <li><%= link_to 'Sign Up', new_user_registration_path %></li>
+                                <li><%= link_to "FAQ", home_faq_path %></li>
+                              <% end %>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-6 col-lg-2">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                    Useful Links
+                            </h3>
+                            <ul>
+                                <li><%= link_to "About Us", home_about_path %></li>
+                            
+                                <li><%= link_to "Contact Us", home_contact_path %></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-6 col-lg-4">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                    Subscribe
+                            </h3>
+                            <form action="/home/subscribe" class="newsletter_form" method="post">
+                              <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
+                                <input type="text" name="email" placeholder="Enter your mail">
+                                <button type="submit">Subscribe</button>
+                            </form>
+                            <p class="newsletter_text">Subscribe newsletter to get updates</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </footer>
+
+    <script>
+            $('#datepicker').datepicker({
+                iconsLibrary: 'fontawesome',
+                // disableDaysOfWeek: [0, 0],
+            //     icons: {
+            //      rightIcon: '<span class="fa fa-caret-down"></span>'
+            //  }
+            });
+            $('#datepicker2').datepicker({
+                iconsLibrary: 'fontawesome',
+                icons: {
+                 rightIcon: '<span class="fa fa-caret-down"></span>'
+             }
+    
+            });
+            var timepicker = $('#timepicker').timepicker({
+             format: 'HH.MM'
+         });
+        </script>
+        <script>
+            // '.tbl-content' consumed little space for vertical scrollbar, scrollbar width depend on browser/os/platfrom. Here calculate the scollbar width .
+$(window).on("load resize ", function() {
+  var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
+  $('.tbl-header').css({'padding-right':scrollWidth});
+}).resize();
+        </script>
+</body>
+
+</html>

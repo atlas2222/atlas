@@ -1,0 +1,84 @@
+<header>
+    <div class="header-area ">
+        <div id="sticky-header" class="main-header-area">
+            <div class="container-fluid p-0">
+                <div class="row align-items-center justify-content-between no-gutters">
+                    <div class="col-xl-2 col-lg-2">
+                        <div class="logo-img">
+                            <a href="index.html">
+                                <img src="/img/logo.png" alt="" style="width: 257px;">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="" style=" padding-left: 160px ;">
+                        <div class="main-menu  d-none d-lg-block">
+                            <nav>
+                              <ul id="navigation">
+                                  <li><%= link_to "Home", admin_index_path %></li>
+                                  <li><%= link_to "Activities",admin_users_activities_path %></li>
+                                  <% if Btc.any? %>
+                                    <li><%= link_to "Edit QR", edit_admin_qr_path(Btc.first) %></li>
+                                  <% else %>
+                                    <li><%= link_to "New QR", new_admin_qr_path %></li>
+                                  <% end %>
+                              </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-2 d-none d-lg-block">
+                        
+                    </div>
+                    <div class="col-12">
+                        <div class="mobile_menu d-block d-lg-none"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<br>
+<br>
+
+<div class=" " style=" margin: auto; width: 50%;">
+	<% if @users.any? %>
+    	    <div class="container" >
+    	        <section style="width: 80%;">
+    	            <!--for demo wrap-->
+    	            <div class="tbl-header">
+    	              <table cellpadding="0" cellspacing="0" border="0" >
+    	                <thead>
+    	                  <tr>
+    	                    <th>Name</th>
+    	                    <th>Email</th>
+    	                    <th>Activity</th>
+                            <th>Profile</th>
+                            <th>Withdrawl</th>
+                            <th>Deposit</th>
+    	                  </tr>
+    	                </thead>
+    	              </table>
+    	            </div>
+    	            <div class="tbl-content">
+    	              <table cellpadding="0" cellspacing="0" border="0">
+    	                <tbody>
+                <% @users.each do |user| %>
+    	                  <tr>
+    	                    <td><%= user.name %></td>
+    	                    <td><%= user.email %></td>
+    	                    <td><%= link_to "Add new Activity", new_admin_user_activity_path(user) %></td>   
+                            <td><%= link_to "Edit User Profit", new_admin_user_profile_path(user) %></td>
+                            <td><%= link_to "Withdraw Requests", admin_user_withdrawls_path(user) %></td>
+                            <td><%= link_to "Deposit Requests", admin_user_deposits_path(user) %></td>             
+    	                  </tr>
+                <% end %>
+    	                </tbody>
+    	              </table>
+    	            </div>
+    	        </section>
+    	        <!-- follow me template -->          
+    	    </div>
+    <% else %>
+      <p>No users currently</p>
+    <% end %>
+</div>

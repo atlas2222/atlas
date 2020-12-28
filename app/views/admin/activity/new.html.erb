@@ -1,0 +1,51 @@
+<div class="container" style="width:100%;"> 
+  <h1>Add <%= @user.name %>'s activity</h1>
+<%= form_for(@activity, as: :activity, url: admin_user_activity_index_path) do |f| %>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon3">Date</span>
+    </div>
+    <%= f.date_field :date, class: "form-control" %>
+  </div>
+
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon3">Asset Name</span>
+    </div>
+    <%= f.text_field :asset, class: "form-control" %>
+  </div>
+  
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon3">Entry</span>
+    </div>
+    <%= f.text_field :entry, class: "form-control" %>
+  </div>
+  
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon3">Stop Loss</span>
+    </div>
+    <%= f.text_field :stoploss, class: "form-control" %>
+  </div>
+  
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon3">Target 1</span>
+    </div>
+    <%= f.text_field :target_1, class: "form-control" %>
+  </div>
+
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon3">Target 2</span>
+    </div>
+    <%= f.text_field :target_2, class: "form-control" %>
+  </div>
+  
+
+  <div>
+  <%= f.submit "Add Activity", class: "btn col-12 text-white", style: "background-color: gold;" %>
+  </div>
+<% end %>
+</div>
