@@ -1,6 +1,5 @@
 class TempController < ApplicationController
-
-  def temp
-  end
-
+	def temp
+		render file: 'file.txt'
+	end
 end
