@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   get 'profile' => "profile#profile_index"
   get 'activities' => "activities#activities_index"
 
+  get '.well-known/pki-validation/EFA74CF984F7F60821F4D259ACBB7BA0.txt' => 'temp#temp', as: 'temp'
+
   #withdrawl
   get 'withdrawls/new' => "withdrawls#new"
 
