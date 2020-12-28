@@ -4,7 +4,7 @@
   
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Atlas Investments Pvt. Ltd. | FAQ</title>
+    <title>Atlas Investment Pvt. Ltd. | FAQ</title>
     <meta name="description" content="">
     <%= favicon_link_tag '/favicon.png' %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -32,7 +32,10 @@
     <link rel="stylesheet" href="/css/slicknav.css">
     <link rel="stylesheet" href="/css/style.css">
     <style>
-        
+        .card-body{
+             color: white;
+
+        }
 h1{
   font-size: 30px;
   color: #fff;
@@ -68,7 +71,7 @@ td{
   text-align: left;
   vertical-align:middle;
   font-weight: 300;
-  font-size: 15px;
+  font-size: 12px;
   color: #fff;
   border-bottom: solid 1px rgba(255,255,255,0.1);
 }
@@ -77,11 +80,7 @@ td{
 /* demo styles */
 
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
-body{
-  background: -webkit-linear-gradient(left, #000000, #000000);
-  background: linear-gradient(to right, #000000, #000000);
-  font-family: 'Roboto', sans-serif;
-}
+
 section{
   margin: 50px;
 }
@@ -117,24 +116,6 @@ body {
   padding: 0;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-a:hover {
-  color: rgba(0, 0, 0, .65);
-}
-
-a:hover {
-  color: rgba(0, 0, 0, .45);
-}
-
-@media only screen and (max-width: 600px) {
-  .card-deck {
-    width: 440px;
-  }
-}
 
 .mobile{
 
@@ -157,6 +138,17 @@ display:none;
 }
 }
 
+.faqfont{
+font-size: large;
+}
+
+@media only screen and (max-width: 600px) {
+.faqfont {
+font-size: 10px;
+}
+}
+
+
 .logo{
 height: 57px;
 width: 157px;
@@ -165,8 +157,7 @@ width: 157px;
 .logo2{
 height: 90px;
 width: 200px;
-}    
-
+}
 
 
     </style>
@@ -181,7 +172,7 @@ width: 200px;
                   <div class="row align-items-center justify-content-between no-gutters">
                       <div class="col-xl-2 col-lg-2">
                           <div class="logo-img">
-                              <a href="index.html">
+                              <a href="/">
                                   <img class="logo mobile" src="/img/logo-edit.png" alt="" >
                                   <img class="logo2 web" src="/img/logo2.png" alt="" >
                               </a>
@@ -267,14 +258,14 @@ width: 200px;
           <!-- follow me template -->
           
     </div>
-    <div class="container">
+   <div class="container ">
       <div id="accordion">
         <div class="card">
           <div class="card-header" id="headingOne">
             <h1 class="mb-0">
               <div class="row justify-content-between" style="padding-top: 15px;">
                 <div class="col-4">
-                  <h1 class="btn collapsed" data-toggle="collapse"   style="float: left;"data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                  <h1 class="btn collapsed faqfont" data-toggle="collapse"   style="float: left;"data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                     Q.𝗪𝗵𝗮𝘁 𝗶𝘀 𝗶𝘁?        
                   </h1>
                 </div>
@@ -285,8 +276,8 @@ width: 200px;
             </h1>
           </div>
       
-          <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-            <div class="card-body text-white">
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body faqfont  text-white">
              A. It is a passive investment plan where investors invest Certain Amount of capital with us. 
             </div>
           </div>
@@ -297,7 +288,7 @@ width: 200px;
             <h1 class="mb-0">
               <div class="row justify-content-between" style="padding-top: 15px;">
                 <div class="col-4">
-                  <h1 class="btn collapsed" data-toggle="collapse"  style="float: left;" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  <h1 class="btn collapsed faqfont" data-toggle="collapse"  style="float: left;" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                     Q.𝐇𝐨𝐰 𝐝𝐨 𝐲𝐨𝐮 𝐦𝐚𝐤𝐞 𝐏𝐫𝐨𝐟𝐢𝐭𝐬?  
                   </h1>
                 </div>
@@ -310,7 +301,7 @@ width: 200px;
           </div>
          
           <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-            <div class="card-body text-white">
+            <div class="card-body faqfont text-white">
                 A. Our Traders work on their funds and trade it.
             </div>
           </div>
@@ -321,7 +312,7 @@ width: 200px;
             <h1 class="mb-0">
                 <div class="row justify-content-between" style="padding-top: 15px;">
                   <div class="col-4">
-                    <h1 class="btn collapsed" data-toggle="collapse"  style="float: left;" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <h1 class="btn collapsed faqfont" data-toggle="collapse"  style="float: left;" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                         Q. 𝗪𝗵𝘆 𝘀𝗵𝗼𝘂𝗹𝗱 𝗜 𝗶𝗻𝘃𝗲𝘀𝘁?      
                     </h1>
                   </div>
@@ -332,7 +323,7 @@ width: 200px;
               </h1>
           </div>
           <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-            <div class="card-body text-white">
+            <div class="card-body faqfont text-white">
               A. Every week, Profits are withdrawn from Broker and paid to investors. 
             </div>
           </div>
@@ -345,7 +336,7 @@ width: 200px;
               <h1 class="mb-0">
                   <div class="row justify-content-between" style="padding-top: 15px;">
                     <div class="col-4">
-                      <h1 class="btn collapsed" data-toggle="collapse"  style="float: left;" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                      <h1 class="btn collapsed faqfont" data-toggle="collapse"  style="float: left;" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                         Q. 𝗪𝗵𝗮𝘁 𝗮𝗻𝗱 𝗵𝗼𝘄 𝗺𝘂𝗰𝗵 𝗶𝘀 𝗺𝘆 𝗯𝗲𝗻𝗲𝗳𝗶𝘁?
                       </h1>
                     </div>
@@ -356,7 +347,7 @@ width: 200px;
                 </h1>
             </div>
             <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
-              <div class="card-body text-white">
+              <div class="card-body  faqfont">
                 A. We generally realise between 12-15% Profit of invested sum, of which we pay 10% ( Minimum Fixed ) to investors.
               </div>
             </div>
@@ -368,7 +359,7 @@ width: 200px;
               <h1 class="mb-0">
                   <div class="row justify-content-between" style="padding-top: 15px;">
                     <div class="col-4">
-                      <h1 class="btn collapsed" data-toggle="collapse"  style="float: left;" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                      <h1 class="btn collapsed faqfont" data-toggle="collapse"  style="float: left;" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                         Q. 𝗪𝗵𝗮𝘁'𝘀 𝘆𝗼𝘂𝗿 𝗽𝗿𝗼𝗳𝗶𝘁 𝗶𝗻 𝘁𝗵𝗶𝘀? 
                       </h1>
                     </div>
@@ -379,7 +370,7 @@ width: 200px;
                 </h1>
             </div>
             <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
-              <div class="card-body text-white">
+              <div class="card-body faqfont ">
                 A  The difference between the two is our compensation. 
               </div>
             </div>
@@ -391,7 +382,7 @@ width: 200px;
               <h1 class="mb-0">
                   <div class="row justify-content-between" style="padding-top: 15px;">
                     <div class="col-4">
-                      <h1 class="btn collapsed" data-toggle="collapse"  style="float: left;" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                      <h1 class="btn collapsed faqfont" data-toggle="collapse"  style="float: left;" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
                         Q. 𝗜𝘀 𝘁𝗵𝗲𝗿𝗲 𝗮 𝘀𝗰𝗼𝗽𝗲 𝘁𝗼 𝗶𝗻𝗰𝗿𝗲𝗮𝘀𝗲 𝗽𝗿𝗼𝗳𝗶𝘁?
                       </h1>
                     </div>
@@ -402,7 +393,7 @@ width: 200px;
                 </h1>
             </div>
             <div id="collapseSix" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
-              <div class="card-body text-white">
+              <div class="card-body faqfont ">
                 A. If we realise more profits ( depending on market conditions ) , we pay higher profit to investors ( between 10-30% ) 
               </div>
             </div>
@@ -414,7 +405,7 @@ width: 200px;
               <h1 class="mb-0">
                   <div class="row justify-content-between" style="padding-top: 15px;">
                     <div class="col-4">
-                      <h1 class="btn collapsed " style="float: left;" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                      <h1 class="btn collapsed faqfont " style="float: left;" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
                         Q. 𝗜𝘀 𝗶𝘁 𝘀𝗮𝗳𝗲? 
                       </h1>
                     </div>
@@ -425,7 +416,7 @@ width: 200px;
                 </h1>
             </div>
             <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
-              <div class="card-body text-white">
+              <div class="card-body faqfont ">
                 We guarantee your Fund safety and 100% investor satisfaction. 
               </div>
             </div>
@@ -437,7 +428,7 @@ width: 200px;
               <h1 class="mb-0">
                   <div class="row justify-content-between" style="padding-top: 15px;">
                     <div class="col-4">
-                      <h1 class="btn collapsed" data-toggle="collapse"  style="float: left;" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                      <h1 class="btn collapsed faqfont" data-toggle="collapse"  style="float: left;" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
                         Q. 𝗕𝘂𝘁 𝘄𝗵𝘆 𝟭𝟬% 𝗼𝗻𝗹𝘆? 𝗢𝘁𝗵𝗲𝗿𝘀 𝗰𝗹𝗮𝗶𝗺 𝗺𝗼𝗿𝗲!
                       </h1>
                     </div>
@@ -448,7 +439,7 @@ width: 200px;
                 </h1>
             </div>
             <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordion">
-              <div class="card-body text-white">
+              <div class="card-body faqfont ">
                 A. We provide less payments than other services because we trade very carefully with investors money and follow utmost strict money management strategy, which we have developed over many years of trading experience and with contribution from master traders to minimise risk and maximize revenue. This is our commitment to structurally strict and sound money management. 
               </div>
             </div>
@@ -460,7 +451,7 @@ width: 200px;
               <h1 class="mb-0">
                   <div class="row justify-content-between" style="padding-top: 15px;">
                     <div class="col-4">
-                      <h1 class="btn collapsed" data-toggle="collapse"  style="float: left;" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                      <h1 class="btn collapsed faqfont" data-toggle="collapse"  style="float: left;" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
                         Q. 𝗜𝘀 𝘁𝗵𝗲𝗿𝗲 𝗿𝗲𝗮𝗹𝗹𝘆 𝗻𝗼 𝘀𝗰𝗼𝗽𝗲 𝘁𝗼 𝗶𝗻𝗰𝗿𝗲𝗮𝘀𝗲 𝗽𝗿𝗼𝗳𝗶𝘁? 
                       </h1>
                     </div>
@@ -471,38 +462,18 @@ width: 200px;
                 </h1>
             </div>
             <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordion">
-              <div class="card-body text-white">
+              <div class="card-body faqfont ">
                 A. There is possibility to increase profit, but this solely rests on your capital investment capabilities. 
               </div>
             </div>
           </div>
           <br>
           <br>
-          <div class="card">
-            <div class="card-header" id="headingTen">
-              <h1 class="mb-0">
-                  <div class="row justify-content-between" style="padding-top: 15px;">
-                    <div class="col-4">
-                      <h1 class="btn collapsed" data-toggle="collapse"  style="float: left;" data-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
-                        Q. 𝗪𝗵𝘆? 𝗜𝗳 𝘆𝗼𝘂 𝗰𝗮𝗻𝗻𝗼𝘁 𝗴𝗿𝗼𝘄 𝟭𝟬𝟬𝟬$ 𝗳𝗮𝘀𝘁𝗲𝗿, 𝗵𝗼𝘄 𝗱𝗼𝗲𝘀 𝗶𝘁 𝗺𝗲𝗮𝗻 𝘆𝗼𝘂'𝗹𝗹 𝗴𝗿𝗼𝘄 𝗺𝗼𝗿𝗲 𝗳𝗮𝘀𝘁𝗹𝘆? 
-                      </h1>
-                    </div>
-                    <div class="col-4">
-                      <i class="fas fa-plus"  style="font-size: medium;" data-toggle="collapse" data-target="#collapseTen" aria-expanded="false" aria-controls="collapseThree"></i>
-                    </div>
-                    </div>
-                </h1>
-            </div>
-            <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordion">
-              <div class="card-body text-white">
-                A. Because in higher capital we get higher margin to trade financial instruments.  
-              </div>
-            </div>
-          </div>
+          
           <br>
       </div>
 
-  </div>  
+  </div>
 
 <footer class="footer" style="background-color: black;">
         <div class="footer_top">
@@ -511,7 +482,7 @@ width: 200px;
                     <div class="col-xl-4 col-md-6 col-lg-3">
                         <div class="footer_widget">
                             <div class="footer_logo">
-                                <a href="index.html">
+                                <a href="/">
                                     <img class="logo mobile" src="/img/logo-edit.png" alt="">
                                     <img class="logo2 web" src="/img/logo2.png" alt="" >
                                 </a>
